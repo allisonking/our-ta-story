@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def interview_guide
+    render 'static_pages/interview_guide'
   end
 
   def submit
