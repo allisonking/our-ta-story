@@ -1,0 +1,84 @@
+<!--<h1>StaticPages#home</h1>
+<p>Find me in app/views/static_pages/home.html.erb</p>-->
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!--	<head>
+		<title>Our TA Story</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	</head>  -->
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+							<!--	<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li>
+                      <%= link_to 'Home', root_path%>
+                      <!-- <a href="index.html">Homepage</a> -->
+                    </li>
+
+										<li>
+                        <%= link_to 'About', static_pages_about_path%></li>
+										<li><a href="elements.html">Stories</a></li>
+										<!--<li>
+											<span class="opener"></span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li> -->
+										<li><%= link_to 'Submit Your Story', static_pages_submit_path%></li>
+										<li><%= link_to 'Interview Guide', static_pages_interview_guide_path%></li>
+										<!--<li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li> -->
+                    <li><%= link_to 'Contact', static_pages_contact_path%></li>
+
+									</ul>
+								</nav>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Our TA Story. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+	</body>
+</html>
