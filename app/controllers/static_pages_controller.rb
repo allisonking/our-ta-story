@@ -9,9 +9,6 @@ class StaticPagesController < ApplicationController
     render 'static_pages/interview_guide'
   end
 
-  def submit
-  end
-
   def contact
   end
 end
