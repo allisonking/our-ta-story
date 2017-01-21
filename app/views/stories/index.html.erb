@@ -1,7 +1,7 @@
 <h1>Stories#index</h1>
-<% flash.each do |message_type, message| %>
-  <div class="alert alert-<%= message_type %>"><%= message %></div>
-<% end %>
+<div class="button-center-wrapper">
+  <%= link_to "Submit Your Story", new_story_path, class: "button submit-story" %>
+</div>
 <section>
   <div class="posts">
     <% @stories.find_each do |story| %>
@@ -16,3 +16,6 @@
     <% end %>
   </div>
 </section>
+<div class="button-center-wrapper">
+  <%= link_to "Submit Your Story", new_story_path, class: "button submit-story" %>
+</div>
