@@ -1,2 +1,19 @@
 <h1>Stories#new</h1>
-<p>Find me in app/views/stories/new.html.erb</p>
+
+<%= form_for(@story) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+    <%= f.submit "Create my account" %>
+<% end %>
+
+<!--
+<%= form_for @story, url: {action: "create"}, html: {class: "submitStoryForm"} do |f| %>
+  <%= label_tag(:name, "Name") %>
+  <%= f.text_field :name %>
+  <%= label_tag(:body, "Story") %>
+  <%= f.text_area :body, size: "60x12" %>
+  <%= f.submit "Create" %>
+<% end %>
+!-->

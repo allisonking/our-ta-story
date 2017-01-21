@@ -1,2 +1,7 @@
 <h1>Stories#index</h1>
+  <p>
+    <% @stories.find_each do |story| %>
+      <%= story.name %>
+    <% end %>
+  </p>
 <p>Find me in app/views/stories/index.html.erb</p>
