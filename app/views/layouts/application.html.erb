@@ -12,6 +12,18 @@
     <%= javascript_include_tag 'application' %>
 
   <body>
+    <!-- Wrapper -->
+      <div id="wrapper">
+        <!-- Main -->
+          <div id="main">
+            <div class="inner">
+
+              <%= render 'layouts/header' %>
+
     <%= yield %>
+            </div>
+
+          </div>
+        </div>
   </body>
 </html>
