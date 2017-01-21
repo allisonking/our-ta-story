@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'stories/index'
-
-  get 'stories/new'
-
-  get 'stories/show'
-
-  get 'stories/create'
-
   root 'static_pages#home'
   get 'static_pages/home'
 
