@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./static_pages/skel.min
 //= require_tree .
