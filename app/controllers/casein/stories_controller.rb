@@ -5,7 +5,7 @@ module Casein
     ## optional filters for defining usage according to Casein::AdminUser access_levels
     # before_action :needs_admin, except: [:action1, :action2]
     # before_action :needs_admin_or_current_user, only: [:action1, :action2]
-  
+
     def index
       @casein_page_title = 'Stories'
       @stories = Story.order(sort_order(:name)).paginate page: params[:page]
@@ -58,7 +58,7 @@ module Casein
     private
 
     def story_params
-      params.require(:story).permit(:name, :body)
+      params.require(:story).permit(:name, :body, :is_published)
     end
   end
 end
