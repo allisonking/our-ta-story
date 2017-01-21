@@ -16,7 +16,8 @@ class StoriesController < ApplicationController
     @story = Story.new story_params
 
     if @story.save
-      flash[:notice] = 'Story created'
+      flash[:notice] = 'Thanks for submitting your story. We\'ll review your story within the next 7 days and
+        determine whether it\'s suitable for publication on our website. We appreciate your willingness to share.'
       redirect_to stories_path
     else
       flash.now[:warning] = 'There were problems when trying to create a new story'
