@@ -16,7 +16,7 @@
       </header>
       <p> <%= truncate(@featured.body, length: 300) %></p>
       <ul class="actions">
-        <li><a href="#stories" class="button big">See More Stories</a></li>
+        <li><%= link_to "More", @featured, class: "button" %></li>
       </ul>
     </div>
 									<span class="image object">
