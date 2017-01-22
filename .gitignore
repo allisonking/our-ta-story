@@ -19,3 +19,6 @@
 
 # Ignore RubyMine config
 .idea/
+
+# Ignore uploads directory
+public/uploads

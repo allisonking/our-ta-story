@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   def index
-    @stories = Story.published
+    @stories = Story.published.paginate page: params[:page], per_page: 10
   end
 
   def new
@@ -26,7 +26,7 @@ class StoriesController < ApplicationController
   private
 
   def story_params
-    params.require(:story).permit(:name, :body)
+    params.require(:story).permit(:name, :body, :thumbnail)
   end
 
 end

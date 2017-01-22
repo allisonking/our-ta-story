@@ -1,4 +1,5 @@
 class Story < ApplicationRecord
+  mount_uploader :thumbnail, ThumbnailUploader
 
   def self.published(count: nil)
     where(is_published: true).where(is_featured: false || nil).order(created_at: :desc).limit(count)
