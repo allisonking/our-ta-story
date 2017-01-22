@@ -20,6 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 
 gem 'haml-rails'
+# for uploading images
+gem 'carrierwave', '~> 1.0'
 
 gem 'casein', '~>5.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
