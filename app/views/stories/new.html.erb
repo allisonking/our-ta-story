@@ -5,6 +5,8 @@
     <%= f.text_field :name %>
     <%= f.label :body %>
     <%= f.text_area :body, rows: "10" %>
+    <%= f.label "Upload a picture:" %>
+    <%= f.file_field :thumbnail %>
     <br>
     <div class="button-center-wrapper">
       <%= f.submit "Submit My Story" %>
