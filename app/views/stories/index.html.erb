@@ -8,7 +8,7 @@
       <article>
         <a href="#" class="image"><%= image_tag("great_photo_1.jpg") %></a>
         <h3><%= story.name %></h3>
-        <p><%= story.body %></p>
+        <p><%= truncate(story.body, length: 300) %></p>
         <ul class="actions">
           <li><a href="#" class="button">More</a></li>
         </ul>
