@@ -8,7 +8,6 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @casein_page_title = 'View story'
     @story = Story.find params[:id]
   end
 

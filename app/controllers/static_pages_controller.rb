@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @stories = Story.published.limit(4)
   end
 
   def about

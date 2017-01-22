@@ -1,0 +1,15 @@
+
+<section>
+  <div class="posts">
+    <% @stories.each do |story| %>
+      <article>
+        <a href="#" class="image"><%= image_tag("great_photo_1.jpg") %></a>
+        <h3><%= story.name %></h3>
+        <p><%= truncate(story.body, length: 300) %></p>
+        <ul class="actions">
+          <li><%= link_to "More", story, class: "button" %></li>
+        </ul>
+      </article>
+    <% end %>
+  </div>
+</section>
