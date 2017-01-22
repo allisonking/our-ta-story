@@ -1,4 +1,4 @@
 
 <h1><%= @story.name %></h1>
-<%= image_tag(@story.thumbnail.url || default_url, class:"story-thumb") %>
+<%= image_tag(@story.thumbnail.thumb || default_url) %>
 <div><%= @story.body %></div>

@@ -22,8 +22,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'haml-rails'
 # for uploading images
 gem 'carrierwave', '~> 1.0'
-
+# for manipulating images
+gem 'mini_magick'
+gem 'fog'
 gem 'casein', '~>5.2.0'
+gem 'figaro'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
