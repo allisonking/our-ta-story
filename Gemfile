@@ -26,6 +26,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'fog'
 gem 'casein', '~>5.2.0'
+gem 'figaro'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
