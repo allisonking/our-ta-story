@@ -3,9 +3,7 @@
   <div class="posts">
     <% @stories.each do |story| %>
       <article>
-        <a href="#" class="image">
-          <%= image_tag(story.thumbnail.url || default_url) %>
-        </a>
+        <%=link_to image_tag(story.thumbnail.url || default_url), story, class:"image" %>
         <h3><%= story.name %></h3>
         <p><%= truncate(story.body, length: 300) %></p>
         <ul class="actions">

@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @stories = Story.published(count: 4)
+    @stories = Story.published_not_featured(count: 4)
     @featured = Story.featured
   end
 

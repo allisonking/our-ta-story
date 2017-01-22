@@ -2,4 +2,8 @@
   <h1><%= @story.name %></h1>
   <%= image_tag(@story.thumbnail.url || default_url, class: "story-image") %>
   <div><%= @story.body %></div>
+  <br>
+  <div class="button-center-wrapper">
+    <%= link_to "Back to Stories", stories_path, class: "button" %>
+  </div>
 </div>
