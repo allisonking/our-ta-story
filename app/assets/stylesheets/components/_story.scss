@@ -1,0 +1,15 @@
+.story-wrapper {
+  @include breakpoint(medium) {
+    width: 70%;
+  }
+  @include breakpoint(small) {
+    width: 100%;
+  }
+
+  font-size: 1.1em;
+
+  .story-image {
+    width: 100%;
+    padding: 1em;
+  }
+}
