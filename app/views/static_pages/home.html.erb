@@ -12,9 +12,9 @@
 <section id="banner">
 		<div class="content">
       <header>
-        <h1>Stories and Stories </h1> <br>
+        <h1><%= @featured.name %></h1> <br>
       </header>
-      <p> Feature Story </p>
+      <p> <%= truncate(@featured.body, length: 300) %></p>
       <ul class="actions">
         <li><a href="#stories" class="button big">See More Stories</a></li>
       </ul>
