@@ -2,7 +2,7 @@ class Story < ApplicationRecord
   mount_uploader :thumbnail, ThumbnailUploader
 
   def self.published(count: nil)
-    where(is_published: true, is_featured: false).order(created_at: :desc).first(count)
+    where(is_published: true, is_featured: false).order(created_at: :desc).limit(count)
   end
 
   def self.by_date
