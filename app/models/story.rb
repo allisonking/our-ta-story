@@ -18,7 +18,7 @@ class Story < ApplicationRecord
   end
 
   def youtube_id
-    YouTubeAddy.extract_video_id(self.video_link)
+    YouTubeAddy.extract_video_id(self.video_link)[0,11]
   end
 
 end
