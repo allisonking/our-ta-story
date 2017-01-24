@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170122012736) do
+ActiveRecord::Schema.define(version: 20170122215301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20170122012736) do
     t.boolean  "is_published"
     t.boolean  "is_featured"
     t.string   "thumbnail"
+    t.string   "media_type"
+    t.string   "video_link"
   end
 
 end
