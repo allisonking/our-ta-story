@@ -1,7 +1,18 @@
 <div class='story-wrapper'>
   <h1><%= @story.name %></h1>
-  <%= image_tag(@story.thumbnail.url || default_url, class: "story-image") %>
-  <div><%= @story.body %></div>
+  <% if @story.media_type == "Video" %>
+  <div class="story-video">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/<%= @story.youtube_id%>"  frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+  <br>
+  <% else %>
+    <%= image_tag(@story.thumbnail.url || default_url, class: "story-image") %>
+  <% end %>
+
+  <div><%= simple_format(@story.body) %></div>
+
   <br>
   <div class="button-center-wrapper">
     <%= link_to "Back to Stories", stories_path, class: "button" %>

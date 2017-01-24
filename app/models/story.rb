@@ -16,4 +16,9 @@ class Story < ApplicationRecord
   def self.featured
     where(is_featured: true).first || Story.by_date.first
   end
+
+  def youtube_id
+    YouTubeAddy.extract_video_id(self.video_link)
+  end
+
 end

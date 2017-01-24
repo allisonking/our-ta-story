@@ -1,12 +1,16 @@
 <h1>Submit a Story</h1>
 
 <%= form_for(@story) do |f| %>
-    <%= f.label :name %>
+<%= f.label :media_type %>
+<%= f.select :media_type, options_for_select([["Select One", ""], "Video", "Audio", "Text"])%>
+    <%= f.label "Title" %>
     <%= f.text_field :name %>
     <%= f.label :body %>
     <%= f.text_area :body, rows: "10" %>
     <%= f.label "Upload a picture:" %>
     <%= f.file_field :thumbnail %>
+    <%= f.label "Link to your video: " %>
+    <%= f.text_field :video_link%>
     <br>
     <div class="button-center-wrapper">
       <%= f.submit "Submit My Story" %>

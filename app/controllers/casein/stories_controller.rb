@@ -59,7 +59,7 @@ module Casein
     private
 
     def story_params
-      params.require(:story).permit(:name, :body, :is_published, :is_featured, :thumbnail)
+      params.require(:story).permit(:name, :body, :is_published, :is_featured, :thumbnail, :media_type, :video_link)
     end
   end
 end
