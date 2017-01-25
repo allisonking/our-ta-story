@@ -14,9 +14,20 @@
         <li><%= link_to "More", @featured, class: "button" %></li>
       </ul>
     </div>
-		<span class="image object">
+
+			<% if @featured.media_type == "Video" %>
+			<!--<%=link_to image_tag("http://img.youtube.com/vi/"+@featured.youtube_id+"/0.jpg"), @featured %>-->
+			<div class="story-video">
+				<iframe width="560" height="315"
+				src="https://www.youtube.com/embed/<%= @featured.youtube_id%>"  frameborder="0" allowfullscreen>
+			</iframe>
+		</div>
+			<% else %>
+			<span class="image object">
 			<%= image_tag(@featured.thumbnail.url) %>
-		</span>
+			</span>
+			<% end %>
+
 	<% else %>
 		<div class="content">
 			<header>
