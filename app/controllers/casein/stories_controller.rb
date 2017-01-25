@@ -9,7 +9,8 @@ module Casein
     def index
       @casein_page_title = 'Stories'
       #@stories = Story.order(sort_order(:name)).paginate page: params[:page]
-      @stories = Story.by_date.paginate page: params[:page]
+      #@stories = Story.by_date.paginate page: params[:page]
+      @stories = Story.by_rank.paginate page: params[:page]
     end
 
     def show
@@ -59,7 +60,7 @@ module Casein
     private
 
     def story_params
-      params.require(:story).permit(:name, :body, :is_published, :is_featured, :thumbnail, :media_type, :video_link)
+      params.require(:story).permit(:name, :body, :is_published, :is_featured, :thumbnail, :media_type, :video_link, :rank)
     end
   end
 end
