@@ -61,4 +61,9 @@
         }
     });
 
+    // Initialize and Configure Magnific Popup Lightbox Plugin
+    $('.popup-gallery-iframe').magnificPopup({
+        type: 'iframe'
+    });
+
 })(jQuery); // End of use strict

@@ -20,7 +20,7 @@ class Story < ApplicationRecord
   end
 
   def self.featured
-    where(is_featured: true).first || Story.by_date.first
+    where(is_featured: true).limit(6) || Story.by_date.first
   end
 
   def youtube_id
