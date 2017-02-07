@@ -4,6 +4,10 @@ class StaticPagesController < ApplicationController
     @featured = Story.featured
   end
 
+  def home_new
+    render 'static_pages/home_new'
+  end
+
   def about
   end
 

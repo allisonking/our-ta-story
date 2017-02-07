@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'static_pages#contact'
 
+  get 'home_new', to: 'static_pages#home_new'
+
   #Casein routes
   namespace :casein do
       resources :stories

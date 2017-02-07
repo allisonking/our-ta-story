@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ./static_pages/skel.min
-//= require_tree .
+//= require creative/bootstrap/bootstrap.min
+//= require creative/scrollreveal/scrollreveal
+//= require creative/jquery.magnific-popup.min
