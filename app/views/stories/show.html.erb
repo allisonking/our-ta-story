@@ -1,5 +1,5 @@
 <div class='story-wrapper'>
-  <h1><%= @story.name %></h1>
+  <h1 class="story-title"><%= @story.name %></h1>
   <% if @story.media_type == "Video" %>
   <div class="story-video">
 
@@ -12,10 +12,10 @@
     <%= image_tag(@story.thumbnail.url || default_url, class: "story-image") %>
   <% end %>
 
-  <div><%= simple_format(@story.body) %></div>
+  <div class="story-body"><%= simple_format(@story.body) %></div>
 
-  <br>
-  <div class="button-center-wrapper">
-    <%= link_to "Back to Stories", stories_path, class: "button" %>
+  
+  <div class="text-center">
+    <%= link_to "Back to Stories", stories_path, class: "btn btn-info" %>
   </div>
 </div>

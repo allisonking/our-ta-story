@@ -1,20 +1,27 @@
 
-<section>
-  <div class="posts">
-    <% @stories.each do |story| %>
-      <article>
-        <% if story.media_type == "Video" %>
-        <%=link_to image_tag("http://img.youtube.com/vi/"+story.youtube_id+"/0.jpg"), story, class:"image" %>
-        <% else %>
-        <%=link_to image_tag(story.thumbnail.url || default_url), story, class:"image" %>
-        <% end %>
 
-        <h3><%= story.name %></h3>
-        <p><%= truncate(story.body, length: 300) %></p>
-        <ul class="actions">
-          <li><%= link_to "More", story, class: "button" %></li>
-        </ul>
-      </article>
+  <div>
+    <% @stories.each_slice(3) do |row| %>
+    <div class="row">
+      <% row.each do |story| %>
+      <div class="col-lg-4 col-md-6 text-center">
+        <div class="service-box">
+          <% if story.media_type == "Video" %>
+          <%=link_to image_tag("http://img.youtube.com/vi/"+story.youtube_id+"/0.jpg", class:"img-responsive"), story  %>
+          <% else %>
+          <%=link_to image_tag(story.thumbnail.url || default_url, class:"img-responsive"), story %>
+          <% end %>
+
+          <h3><%= story.name %></h3>
+          <p><%= truncate(story.body, length: 300) %></p>
+
+          <br>
+          <div class="text-center">
+            <%= link_to "More", story, class: "btn btn-primary sr-button align-botomm" %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
     <% end %>
   </div>
-</section>

@@ -1,11 +1,18 @@
-<h1>Stories<%= casein_pagination_details @stories %></h1>
-<div class="button-center-wrapper">
-  <%= link_to "Submit Your Story", new_story_path, class: "button submit-story" %>
+
+<div class="text-center">
+  <h1 class="story-title">Stories<%= casein_pagination_details @stories %></h1>
+  <hr>
+  <%= link_to "Submit Your Story", new_story_path, class: "btn btn-primary sr-button" %>
+  <hr>
 </div>
 <%= render "stories/stories_index" %>
-<div class="button-center-wrapper">
-  <%= link_to "Submit Your Story", new_story_path, class: "button submit-story" %>
+
+<div class="text-center">
+  <hr>
+  <%= link_to "Submit Your Story", new_story_path, class: "btn btn-primary sr-button" %>
+  <hr>
 </div>
+<br>
 <div class="text-center">
   <%= will_paginate @stories %>
 </div>

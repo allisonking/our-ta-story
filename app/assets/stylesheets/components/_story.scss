@@ -1,0 +1,35 @@
+.story-wrapper {
+  width: 100%;
+
+  font-size: 1.1em;
+  padding-bottom: 1em;
+
+  .story-image {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .story-title {
+    padding: 1em;
+  }
+
+  .story-body {
+    padding : 1em;
+  }
+
+/* Got this from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+  .story-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+
+  .story-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
