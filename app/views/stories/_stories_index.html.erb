@@ -1,15 +1,23 @@
+<%= render 'layouts/nav' %>
 
-
-  <div>
-    <% @stories.each_slice(3) do |row| %>
     <div class="row">
-      <% row.each do |story| %>
-      <div class="col-lg-4 col-md-6 text-center">
+      <% @stories.each do |story| %>
+      <div class="text-center" id="story-select-wrapper">
         <div class="service-box">
           <% if story.media_type == "Video" %>
-          <%=link_to image_tag("http://img.youtube.com/vi/"+story.youtube_id+"/0.jpg", class:"img-responsive"), story  %>
+          <div class="story-index-wrapper">
+            <div class="icon-container">
+              <i class="fa fa-3x fa-video-camera"> </i>
+            </div>
+            <%=link_to image_tag("http://img.youtube.com/vi/"+story.youtube_id+"/0.jpg", class:"img-responsive"), story  %>
+          </div>
           <% else %>
+          <div class="story-index-wrapper">
+            <div class="icon-container">
+              <i class="fa fa-3x fa-file-text-o"> </i>
+            </div>
           <%=link_to image_tag(story.thumbnail.url || default_url, class:"img-responsive"), story %>
+        </div>
           <% end %>
 
           <h3><%= story.name %></h3>
@@ -23,5 +31,3 @@
       </div>
       <% end %>
     </div>
-    <% end %>
-  </div>

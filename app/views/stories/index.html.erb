@@ -1,15 +1,25 @@
+<section class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <i class="fa fa-4x fa-newspaper-o text-faded sr-icons"></i>
+        </div>
 
-<div class="text-center">
-  <h1 class="story-title">Stories<%= casein_pagination_details @stories %></h1>
-  <hr>
-  <%= link_to "Submit Your Story", new_story_path, class: "btn btn-primary sr-button" %>
-  <hr>
-</div>
+        <div class="col-lg-12 text-center">
+          <hr class="light">
+          <h2 class="section-heading">Stories <%= casein_pagination_details @stories %></h2>
+          <hr class="light">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 <%= render "stories/stories_index" %>
 
 <div class="text-center">
   <hr>
-  <%= link_to "Submit Your Story", new_story_path, class: "btn btn-primary sr-button" %>
+  <%= link_to "Submit A Story", new_story_path, class: "btn btn-primary sr-button" %>
   <hr>
 </div>
 <br>

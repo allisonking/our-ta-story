@@ -28,6 +28,7 @@ gem 'fog'
 gem 'casein', '~>5.2.0'
 gem 'figaro'
 gem 'youtube_addy'
+gem 'bootstrap_form'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

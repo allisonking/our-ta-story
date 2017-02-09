@@ -1,3 +1,5 @@
+
+<%= render 'layouts/nav' %>
 <div class='story-wrapper'>
   <h1 class="story-title"><%= @story.name %></h1>
   <% if @story.media_type == "Video" %>
@@ -12,10 +14,10 @@
     <%= image_tag(@story.thumbnail.url || default_url, class: "story-image") %>
   <% end %>
 
-  <div class="story-body"><%= simple_format(@story.body) %></div>
+  <div class="story-body section-block"><%= simple_format(@story.body) %></div>
 
-  
+
   <div class="text-center">
-    <%= link_to "Back to Stories", stories_path, class: "btn btn-info" %>
+    <%= link_to "Back to Stories", stories_path, class: "btn btn-primary sr-button" %>
   </div>
 </div>

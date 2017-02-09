@@ -42,7 +42,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Our TA Story</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,9 +51,14 @@
                     <li>
                         <a class="page-scroll" href="#stories">Stories</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#submit">Submit</a>
+                    <li class="dropdown">
+                      <a class="page-scroll" href="#submit">Submit</a>
+                      <ul class="dropdown-menu">
+                        <li><%= link_to "Interview Guide", interview_guide_path %></li>
+                        <li><%= link_to "Submission Form", new_story_path %></li>
+                      </ul>
                     </li>
+
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -73,10 +78,10 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
-                <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#stories" class="btn btn-primary btn-xl page-scroll">Stories</a>
+                <hr class="light">
+                <h1 id="homeHeading">Our Taiwanese American Story</h1>
+                <hr class="light">
+                <p>We collect and archive stories of Taiwanese Americans to preserve a collective history and foster intergenerational and intercultural communication.</p>
             </div>
         </div>
     </header>
@@ -93,7 +98,7 @@
       <br>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <%= link_to 'All Stories', stories_path, class:"btn btn-primary btn-xl" %>
+          <%= link_to 'All Stories', stories_path, class:"btn btn-primary btn-xl sr-button" %>
         </div>
       </div>
       <br>
@@ -147,8 +152,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
+                  <hr>
                     <h2 class="section-heading">About</h2>
-                    <hr class="light">
+                    <hr>
                 </div>
             </div>
             <p class="text-center"> Our TA Story was created at the Taiwanese American Foundation Summer Conference as part of the tafLabs program. </p>
@@ -224,6 +230,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
+                <hr class="primary">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
                     <p>Ready to start your next project with us? That's great! Send us an email and we will get back to you as soon as possible!</p>
