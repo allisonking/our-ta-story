@@ -1,6 +1,7 @@
 class StoriesController < ApplicationController
   def index
     @stories = Story.published.paginate page: params[:page], per_page: 10
+    @featured = Story.featured
   end
 
   def new
