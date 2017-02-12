@@ -1,10 +1,14 @@
 
 <%= render 'layouts/nav' %>
+<aside class="bg-primary">
+  <div class='story-wrapper'>
+    <h1 class="story-title text-center"><%= @story.name %></h1>
+  </div>
+</aside>
 <div class='story-wrapper'>
-  <h1 class="story-title"><%= @story.name %></h1>
+
   <% if @story.media_type == "Video" %>
   <div class="story-video">
-
     <iframe width="560" height="315"
       src="https://www.youtube.com/embed/<%= @story.youtube_id%>"  frameborder="0" allowfullscreen>
     </iframe>
