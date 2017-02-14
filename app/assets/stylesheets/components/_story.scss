@@ -67,6 +67,11 @@
   display: inline-block;
   float: none;
   vertical-align: top;
+
+  h3, p {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 @media (min-width: 0px) {
