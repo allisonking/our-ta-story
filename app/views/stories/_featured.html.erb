@@ -5,7 +5,7 @@
             <div class="col-lg-4 col-sm-6">
               <%= link_to featured, class:"portfolio-box" do%>
                 <% if featured.media_type == "Video" %>
-                <%=image_tag("http://img.youtube.com/vi/"+featured.youtube_id+"/0.jpg", class:"img-responsive")%>
+                <%=image_tag("https://img.youtube.com/vi/"+featured.youtube_id+"/0.jpg", class:"img-responsive")%>
                 <% else %>
               <%=image_tag(featured.thumbnail.url || default_url, class:"img-responsive")%>
               <% end %>
