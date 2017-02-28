@@ -9,9 +9,22 @@
   padding: 1em;
 
   .story-image {
-    width: 100%;
+    //width: 60%;
     padding: 1em;
+    margin: auto;
+    display: block;
+  }
 
+  @media (min-width: 768px) {
+    .story-image {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 979px) {
+    .story-image {
+      width: 60%;
+    }
   }
 
   .story-title {
