@@ -1,4 +1,8 @@
+@import 'components/colors';
+
 .submit-wrapper {
+
+  .text {
   width: 80%;
   margin: 0 auto;
   font-size: 1.1em;
@@ -6,6 +10,23 @@
   //padding-bottom: 1em;
   //padding-left: 2em;
   // padding-right: 2em;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: asset_url("tsai_family.jpg");
+  text-align: center;
+  color: $primary-color;
+  text-shadow: 1px 1px black;
+
+}
 
   .submit-title {
     padding: 1em;

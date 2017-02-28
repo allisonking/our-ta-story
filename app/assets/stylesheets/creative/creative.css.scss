@@ -187,9 +187,11 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: asset_url('header.jpg');
+  background-image: asset_url('IMG_6846.JPG');
   text-align: center;
-  color: white;
+  color: $primary-color;
+  text-shadow: 1px 1px black;
+
 }
 header .header-content {
   position: relative;
@@ -208,10 +210,11 @@ header .header-content .header-content-inner hr {
   margin: 30px auto;
 }
 header .header-content .header-content-inner p {
-  font-weight: 300;
-  color: $faded-color;
+  font-weight: 400;
+  color: $primary-color-light;
   font-size: 16px;
   margin-bottom: 50px;
+  text-shadow: 1px 1px black;
 }
 @media (min-width: 768px) {
   header {
@@ -266,7 +269,8 @@ header .header-content .header-content-inner p {
   opacity: 0;
   display: block;
   //background: rgba(240, 95, 64, 0.9);
-  background: rgba(50, 107, 120, 0.9);
+  //background: rgba(50, 107, 120, 0.9);
+  background: $primary-color-faded;
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -452,7 +456,7 @@ body {
 .about-person {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  //border-radius: 50%;
 }
 
 @media (min-width: 979px) {
