@@ -42,7 +42,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Our Taiwanese American Story</a>
+                <a id="home-name" class="navbar-brand page-scroll" href="#page-top">Our Taiwanese American Story</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -120,30 +120,31 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 text-center">
+                <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
-                      <%= link_to interview_guide_path do %>
+                      <!--<%= link_to interview_guide_path do %>-->
                         <i class="fa fa-4x fa-comments-o text-faded sr-icons"></i>
 
                         <h3 style = "color: white;">Interview Guide</h3>
-                        <p class="text-faded">Read our interview guide for tips on crafting a great story.</p>
-                        <% end %>
+                        <p class="text-faded">Read our <u><%= link_to 'interview guide', interview_guide_path %></u> for tips on crafting a great story.</p>
+                        <!--<% end %>-->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center">
+                <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-newspaper-o text-faded sr-icons"></i>
-                        <h3>Create Your Story</h3>
-                        <p class="text-faded">Record or write- any way to get your story!</p>
+                        <h3>Craft Your Story</h3>
+                        <p class="text-faded">Record or write- any way you are comfortable with!</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center">
+                <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
-                        <%= link_to new_story_path do %>
+                        <!--<%= link_to new_story_path do %>-->
                         <i class="fa fa-4x fa-paper-plane  text-faded sr-icons"></i>
                         <h3 style = "color: white;">Submit!</h3>
-                        <p class="text-faded">Once your story is ready, go ahead and submit it here.</p>
-                        <% end %>
+                        <!--<%= link_to 'Submit', new_story_path, class:"btn btn-default btn-xl sr-button" %>-->
+                        <p class="text-faded">Once your story is ready to go, go ahead and <u><%= link_to 'submit it here', new_story_path %></u>.</p>
+                        <!--<% end %>-->
                     </div>
                 </div>
             </div>
@@ -152,7 +153,7 @@
 
 
     <section id="about">
-        <div class="container">
+      <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                   <hr>
@@ -164,34 +165,32 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-3 col-lg-offset-3 col-md-6 text-center">
                     <div class="service-box">
                         <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
                         <%= image_tag("taflabs_logo.jpg", class:"img-responsive, sr-icons, about-person") %>
-                        <h3>tafLabs</h3>
+                        <h3><a href="http://www.tafworld.org/taf-summer-conference/programs/taflabs/">tafLabs</a></h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                   <div class="service-box">
                       <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
+                      <%= image_tag("taf.jpg", class:"img-responsive, sr-icons, about-person") %>
+                      <h3><a href="http://www.tafworld.org">TAF</a></h3>
+                  </div>
+                </div>
+                <!--<div class="col-lg-3 col-md-6 text-center">
+                  <div class="service-box">
                       <%= image_tag("default.png", class:"img-responsive, sr-icons, about-person") %>
                       <h3>Fill in later</h3>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                   <div class="service-box">
-                      <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
                       <%= image_tag("default.png", class:"img-responsive, sr-icons, about-person") %>
                       <h3>Fill in later</h3>
                   </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                  <div class="service-box">
-                      <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
-                      <%= image_tag("default.png", class:"img-responsive, sr-icons, about-person") %>
-                      <h3>Fill in later</h3>
-                  </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <br>

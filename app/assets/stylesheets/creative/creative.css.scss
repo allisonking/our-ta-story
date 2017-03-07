@@ -82,6 +82,7 @@ aside {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+//  font-size: 16px;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
@@ -119,9 +120,8 @@ aside {
     background-color: transparent;
   }
 
-  /*.nav li.dropdown:hover > ul.dropdown-menu:hover > li{
-
-    color: #222222;
+  /*#home-name {
+    content: 'Our TA Story';
   }*/
 
   .nav > .dropdown > .dropdown-menu > li > a {
@@ -134,8 +134,10 @@ aside {
     background-color: transparent;
     border-color: rgba(255, 255, 255, 0.3);
   }
+
   .navbar-default .navbar-header .navbar-brand {
     color: $faded-color;
+    //font-size: 15px;
   }
   .navbar-default .navbar-header .navbar-brand:hover,
   .navbar-default .navbar-header .navbar-brand:focus {
@@ -186,8 +188,8 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center;
-  background-image: asset_url('IMG_6846.JPG');
+  background-position: center 55%;
+  background-image: asset_url('IMG_1683.JPG');
   text-align: center;
   color: $primary-color;
   text-shadow: 1px 1px black;
@@ -214,7 +216,7 @@ header .header-content .header-content-inner p {
   color: $primary-color-light;
   font-size: 16px;
   margin-bottom: 50px;
-  text-shadow: 1px 1px black;
+  //text-shadow: 2px 2px black;
 }
 @media (min-width: 768px) {
   header {
@@ -454,8 +456,8 @@ body {
 }
 
 .about-person {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   //border-radius: 50%;
 }
 

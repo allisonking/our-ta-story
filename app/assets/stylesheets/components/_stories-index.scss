@@ -1,0 +1,25 @@
+@import 'components/colors';
+
+.story-index-wrapper {
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: 10% 80%;
+  background-image: asset_url("IMG_1681.JPG");
+  text-align: center;
+  color: $primary-color;
+  text-shadow: 1px 1px black;
+
+}
+
+  .submit-title {
+    padding: 1em;
+  }
+
+}
