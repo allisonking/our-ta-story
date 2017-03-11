@@ -116,7 +116,12 @@
     right: 0;
     padding: 0.5em;
   }
-  i {
+
+  .header {
+    color: white;
+  }
+
+  .media-indicator {
     color: $primary-color;
   }
 }
