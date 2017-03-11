@@ -81,9 +81,9 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <hr class="primary">
+                <hr class="light">
                 <h1 id="homeHeading">Our Taiwanese American Story</h1>
-                <hr class="primary">
+                <hr class="light">
                 <p>We collect and archive stories of Taiwanese Americans to preserve a collective history and foster intergenerational and intercultural communication.</p>
             </div>
         </div>
@@ -167,16 +167,20 @@
             <div class="row">
                 <div class="col-lg-3 col-lg-offset-3 col-md-6 text-center">
                     <div class="service-box">
+                      <%= link_to "http://www.tafworld.org/taf-summer-conference/programs/taflabs/", target: :_blank do %>
                         <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
                         <%= image_tag("taflabs_logo.jpg", class:"img-responsive, sr-icons, about-person") %>
-                        <h3><a href="http://www.tafworld.org/taf-summer-conference/programs/taflabs/">tafLabs</a></h3>
+                        <!--<h3><a href="http://www.tafworld.org/taf-summer-conference/programs/taflabs/">tafLabs</a></h3>-->
+                        <h3>tafLabs</h3>
+                        <% end %>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                   <div class="service-box">
-                      <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
-                      <%= image_tag("taf.jpg", class:"img-responsive, sr-icons, about-person") %>
-                      <h3><a href="http://www.tafworld.org">TAF</a></h3>
+                    <%= link_to "http://www.tafworld.org", target: :_blank do %>
+                    <%= image_tag("taf.jpg", class:"img-responsive, sr-icons, about-person") %>
+                    <h3>TAF</h3>
+                    <% end %>
                   </div>
                 </div>
                 <!--<div class="col-lg-3 col-md-6 text-center">

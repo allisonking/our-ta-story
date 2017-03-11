@@ -191,7 +191,7 @@ header {
   background-position: center 55%;
   background-image: asset_url('IMG_1683.JPG');
   text-align: center;
-  color: $primary-color;
+  color: white;
   text-shadow: 1px 1px black;
 
 }
@@ -213,10 +213,10 @@ header .header-content .header-content-inner hr {
 }
 header .header-content .header-content-inner p {
   font-weight: 400;
-  color: $primary-color-light;
+  color: white;
   font-size: 16px;
   margin-bottom: 50px;
-  //text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
 }
 @media (min-width: 768px) {
   header {
