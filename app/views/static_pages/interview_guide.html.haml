@@ -33,83 +33,100 @@
       %li
         Try to be as specific and descriptive in your answers as possible. Feel free to expand as much as you like.
     %hr
-    %h2
-      Questions
-    %h3
-      Interview starters:
-    %ul
-      %li
-        Tell me about your parents. What was your life like growing up?
-      %li
-        What was your childhood home like? Who else lived in the house with you? What did your bedroom look like?
-      %li
-        Who lived in your home and what were they like?
-      %li
-        How would you describe the area you grew up?
-      %li
-        What is your earliest memory?
-    %h3
-      Next-level questions:
-    %ul
-      %li
-        Tell me about a teacher or other adult that impacted your life while you were growing up.
-      %li
-        If you could go back and relive your teenage years, would you? Why/why not?
-      %li
-        Did you get into any trouble growing up? What was the worst thing you did?
-      %li
-        What lessons did your time in the military teach you? Did it change you?
-      %li
-        How do you feel the political climate affected your life?
-      %li
-        How did you meet my mom/dad?
-      %li
-        How and why did you immigrate?
-      %li
-        How did you feel about leaving Taiwan?
-      %li
-        How did you feel when you arrived in America?
-      %li
-        What was the biggest difference between your life in Taiwan and your life in America?
-      %li
-        What surprised you most about America?
-      %li
-        What was your favorite and least favorite part about America?
-      %li
-        What were unexpected challenges of raising children in America?
-      %li
-        What were some of your favorite and least favorite parts about raising me?
-      %li
-        Tell me about a time that I made you upset.
-      %li
-        Tell me about a time that I made you proud.
-      %li
-        Of all the family members you have either known or heard stories about, who do you think lived the most interesting life? Why?
-      %li
-        Who were your favorite relatives? Do you remember any stories they told you?
-      %li
-        What is your most vivid memory of your parents?
-      %li
-        What do you miss the most about your hometown?
-      %li
-        What is your biggest regret?
-      %li
-        Who has been the biggest influence on your life? What lessons did that person teach you?
-      %li
-        What do you see as our family’s legacy?
-    %h3
-      Concluding Questions:
-    %ul
-      %li
-        In what ways did you want to ensure that my childhood would not be like your childhood? In what ways did you want to ensure that it would be similar?
-      %li
-        How has your life been different than how you imagined it would be when you were young?
-      %li
-        What are some of the most important lessons you’ve learned in life? How did you learn them?
-      %li
-        How do you identify ethnically? i.e. Taiwanese, Taiwanese American
-      %li
-        When you think of being Taiwanese American, what comes to mind?
+
+    %h2 Sample Questions
+    #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+      .panel.panel-default
+        #headingOne.panel-heading{:role => "tab"}
+          %h4.panel-title
+            %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
+              Interview Starters
+        #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+          .panel-body
+          %ul
+            %li
+              Tell me about your parents. What was your life like growing up?
+            %li
+              What was your childhood home like? Who else lived in the house with you? What did your bedroom look like?
+            %li
+              Who lived in your home and what were they like?
+            %li
+              How would you describe the area you grew up?
+            %li
+              What is your earliest memory?
+      .panel.panel-default
+        #headingTwo.panel-heading{:role => "tab"}
+          %h4.panel-title
+            %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "button"}
+              Next Level Questions
+        #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+          .panel-body
+            %ul
+              %li
+                Tell me about a teacher or other adult that impacted your life while you were growing up.
+              %li
+                If you could go back and relive your teenage years, would you? Why/why not?
+              %li
+                Did you get into any trouble growing up? What was the worst thing you did?
+              %li
+                What lessons did your time in the military teach you? Did it change you?
+              %li
+                How do you feel the political climate affected your life?
+              %li
+                How did you meet my mom/dad?
+              %li
+                How and why did you immigrate?
+              %li
+                How did you feel about leaving Taiwan?
+              %li
+                How did you feel when you arrived in America?
+              %li
+                What was the biggest difference between your life in Taiwan and your life in America?
+              %li
+                What surprised you most about America?
+              %li
+                What was your favorite and least favorite part about America?
+              %li
+                What were unexpected challenges of raising children in America?
+              %li
+                What were some of your favorite and least favorite parts about raising me?
+              %li
+                Tell me about a time that I made you upset.
+              %li
+                Tell me about a time that I made you proud.
+              %li
+                Of all the family members you have either known or heard stories about, who do you think lived the most interesting life? Why?
+              %li
+                Who were your favorite relatives? Do you remember any stories they told you?
+              %li
+                What is your most vivid memory of your parents?
+              %li
+                What do you miss the most about your hometown?
+              %li
+                What is your biggest regret?
+              %li
+                Who has been the biggest influence on your life? What lessons did that person teach you?
+              %li
+                What do you see as our family’s legacy?
+      .panel.panel-default
+        #headingThree.panel-heading{:role => "tab"}
+          %h4.panel-title
+            %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "button"}
+              Concluding Questions
+        #collapseThree.panel-collapse.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
+          .panel-body
+            %ul
+              %li
+                In what ways did you want to ensure that my childhood would not be like your childhood? In what ways did you want to ensure that it would be similar?
+              %li
+                How has your life been different than how you imagined it would be when you were young?
+              %li
+                What are some of the most important lessons you’ve learned in life? How did you learn them?
+              %li
+                How do you identify ethnically? i.e. Taiwanese, Taiwanese American
+              %li
+                When you think of being Taiwanese American, what comes to mind?
+
     %ul
       A majority of the above questions are from the
       %a{href: "https://storycorps.me/question-generator/"}
