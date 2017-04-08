@@ -1,0 +1,25 @@
+<%= bootstrap_form_for(@story) do |f| %>
+    <h4>Start by selecting the Media Type of Your Story</h4>
+    <%= f.select :media_type, options_for_select(options_for_select({
+       "Select One" => "", "Video" => "video", "Audio" => "audio", "Text" => "text" }, "text")
+    ),{ class: "col-lg-4" }, required: true%>
+
+    <div class="base_story_input">
+      <%= f.text_field :author_name, help: "This can be the name of the interviewer, the interviewee, or both!" %>
+      <%= f.text_field :hometown, help: "This will be displayed along with your story only if you fill it in and
+      can be anywhere you consider a home" %>
+      <%= f.number_field :birth_year, help: "This will be displayed along with your story only if you fill it in"%>
+
+      <%= f.text_field :name, label: "Title", required: true%>
+      <%= f.text_area :body, rows: "10", label: "Body", required: true %>
+
+      <%= render :partial => "form_submit_text", :locals => {:f=>f} %>
+      <%= render :partial => "form_submit_audio", :locals => {:f=>f} %>
+      <%= render :partial => "form_submit_video", :locals => {:f=>f} %>
+      <%= f.email_field :email, help:"This will only be used if we need to contact you and will never be publically displayed." %>
+
+      <div class="text-center">
+        <%= f.submit "Submit My Story", class:"btn btn-primary sr-button" %>
+      </div>
+    </div>
+<% end %>

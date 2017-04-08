@@ -32,4 +32,8 @@
     padding: 1em;
   }
 
+  label.required:after {
+    content: "*"
+  }
+
 }

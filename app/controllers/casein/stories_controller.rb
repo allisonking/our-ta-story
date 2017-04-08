@@ -60,8 +60,8 @@ module Casein
     private
 
     def story_params
-      params.require(:story).permit(:name, :body, :is_published, :is_featured, :thumbnail, :media_type, :video_link,
-                                    :rank, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
+      params.require(:story).permit(:name, :body, :is_published, :is_featured,
+      :thumbnail, :media_type, :video_link, :rank, :author_name, :hometown, :birth_year, :email)
     end
   end
 end

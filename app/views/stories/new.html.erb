@@ -33,7 +33,7 @@
 </ul>
 
 <p>Once reviewed, your content will be posted on the website.  If you have any questions, please contact us at <a href="mailto:info@ourtastory.com">info@ourtastory.com</a>.</p>
-<%= bootstrap_form_for(@story) do |f| %>
+<%= render("form_submit_base") %>
 
 <%= f.select :media_type, options_for_select([["Select One", ""], "Video", "Audio", "Text"]), { class: "col-lg-4" }%>
 

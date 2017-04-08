@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408143346) do
+ActiveRecord::Schema.define(version: 20170408175618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,10 @@ ActiveRecord::Schema.define(version: 20170408143346) do
     t.string   "media_type"
     t.string   "video_link"
     t.integer  "rank"
+    t.string   "author_name"
+    t.string   "hometown"
+    t.integer  "birth_year"
+    t.string   "email"
   end
 
   create_table "taggings", force: :cascade do |t|

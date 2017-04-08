@@ -12,9 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require creative/bootstrap/bootstrap.min
 //= require creative/scrollreveal/scrollreveal
 //= require creative/jquery.magnific-popup.min
+//= require submit_story.js
 //= require chosen.jquery.min.js
 //= require chosen.proto.min.js
 
