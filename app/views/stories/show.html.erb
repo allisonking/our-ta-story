@@ -20,6 +20,8 @@
 
   <div class="story-body section-block"><%= simple_format(@story.body) %></div>
 
+  <%= @story.tag_list %>
+
 
   <div class="text-center">
     <%= link_to "Back to Stories", stories_path, class: "btn btn-primary sr-button" %>

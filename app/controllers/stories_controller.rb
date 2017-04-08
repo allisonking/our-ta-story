@@ -1,7 +1,10 @@
 class StoriesController < ApplicationController
   def index
-    @stories = Story.published.paginate page: params[:page], per_page: 10
     @featured = Story.featured
+    @stories = Story.published
+    @stories = @stories.tagged_with(params[:tag]) if params[:tag]
+
+    @stories.paginate page: params[:page], per_page: 10
   end
 
   def new
@@ -27,7 +30,7 @@ class StoriesController < ApplicationController
   private
 
   def story_params
-    params.require(:story).permit(:name, :body, :thumbnail, :media_type, :video_link)
+    params.require(:story).permit(:name, :body, :thumbnail, :media_type, :video_link, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
   end
 
 end

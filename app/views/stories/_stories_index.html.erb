@@ -28,6 +28,7 @@
             <%= link_to "More", story, class: "btn btn-primary sr-button align-botomm" %>
           </div>
         </div>
+        <%= raw story.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
       </div>
       <% end %>
     </div>

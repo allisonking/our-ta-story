@@ -30,6 +30,14 @@ gem 'figaro'
 gem 'youtube_addy'
 gem 'bootstrap_form'
 
+# Tagging
+gem 'acts-as-taggable-on'
+
+# JS assets to gem
+source 'https://rails-assets.org' do
+  gem 'rails-assets-chosen'
+end
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

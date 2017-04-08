@@ -15,3 +15,5 @@
 //= require creative/bootstrap/bootstrap.min
 //= require creative/scrollreveal/scrollreveal
 //= require creative/jquery.magnific-popup.min
+//= require chosen
+

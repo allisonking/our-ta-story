@@ -43,6 +43,9 @@
     <%= f.file_field :thumbnail, label: "Upload a picture: "%>
 
     <%= f.text_field :video_link, label: "Link to your video:"%>
+
+    <%= f.label :tag_list, 'Tags (separated with comas)' %>
+    <%= f.text_field :tag_list, class: 'form-control' %>
     <br>
     <div class="text-center">
       <%= f.submit "Submit My Story", class:"btn btn-primary sr-button" %>
