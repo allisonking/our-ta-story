@@ -35,10 +35,11 @@
 <p>Once reviewed, your content will be posted on the website.  If you have any questions, please contact us at <a href="mailto:info@ourtastory.com">info@ourtastory.com</a>.</p>
 <%= bootstrap_form_for(@story) do |f| %>
 
-<%= f.select :media_type, options_for_select([["Select One", ""], "Video", "Audio", "Text"]), { class: "col-lg-4" }%>
+<%= f.select :media_type, options_for_select([["Select One", ""], "Video", "Audio", "Text"]),
+{ class: "col-lg-4" }, required: true%>
 
-    <%= f.text_field :name, label: "Title" %>
-    <%= f.text_area :body, rows: "10", label: "Body" %>
+    <%= f.text_field :name, label: "Title", required: true%>
+    <%= f.text_area :body, rows: "10", label: "Body", required: true %>
 
     <%= f.file_field :thumbnail, label: "Upload a picture: "%>
 
