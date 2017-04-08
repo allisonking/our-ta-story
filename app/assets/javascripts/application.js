@@ -15,3 +15,4 @@
 //= require creative/bootstrap/bootstrap.min
 //= require creative/scrollreveal/scrollreveal
 //= require creative/jquery.magnific-popup.min
+//= require submit_story.js
