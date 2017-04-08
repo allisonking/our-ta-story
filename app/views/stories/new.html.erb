@@ -44,8 +44,8 @@
 
     <%= f.text_field :video_link, label: "Link to your video:"%>
 
-    <%= f.label :tag_list, 'Tags (separated with comas)' %>
-    <%= f.text_field :tag_list, class: 'form-control' %>
+      <%= f.label :tag_list, "Tags" %>
+      <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %>
     <br>
     <div class="text-center">
       <%= f.submit "Submit My Story", class:"btn btn-primary sr-button" %>
