@@ -23,7 +23,11 @@
   </div>
 </div>
 
-
+<div class="row">
+  <%= f.label :tag_list, "Tags" %>
+  <%= @story.tag_list %>
+  <!--TODO edit tags list for story-->
+</div>
 
 <% if f.object.media_type == "Video" %>
 <div class="row">

@@ -1,10 +1,14 @@
 class StoriesController < ApplicationController
   def index
-    @featured = Story.featured
     @stories = Story.published
-    @stories = @stories.tagged_with(params[:tag]) if params[:tag]
-
-    @stories.paginate page: params[:page], per_page: 10
+    if params[:tag]
+      @stories = @stories.tagged_with(params[:tag]) if params[:tag]
+      @title = "Stories tagged: #{params[:tag]}"
+    else
+      @title = "All stories"
+      @featured = Story.featured
+    end
+    @stories = @stories.paginate page: params[:page], per_page: 10
   end
 
   def new

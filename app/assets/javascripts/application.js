@@ -24,7 +24,7 @@ $(document).on('ready page:load', function () {
         width: '100%',
         create_option: function (tag) {
             var chosen = this;
-            data = {'tag': tag}
+            data = {'tag': tag};
             $.ajax({
                 type: 'post',
                 url: '/tags',
@@ -46,7 +46,8 @@ $(document).on('ready page:load', function () {
             })
         },
         persistent_create_option: true,
-        skip_no_results: true
+        skip_no_results: true,
+        create_option_text: 'Add tag'
     })
 });
 
