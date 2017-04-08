@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     CFPropertyList (2.3.4)
     actioncable (5.0.1)
@@ -39,6 +40,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (4.0.0)
+      activerecord (>= 4.0)
     arel (7.1.4)
     authlogic (3.5.0)
       activerecord (>= 3.2, < 5.1)
@@ -342,6 +345,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on
   bootstrap_form
   byebug
   carrierwave (~> 1.0)

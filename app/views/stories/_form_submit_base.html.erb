@@ -13,6 +13,9 @@
       <%= f.text_field :name, label: "Title", required: true%>
       <%= f.text_area :body, rows: "10", label: "Body", required: true %>
 
+      <%= f.label :tag_list, "Tags" %>
+      <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %>
+
       <%= render :partial => "form_submit_text", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_audio", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_video", :locals => {:f=>f} %>
