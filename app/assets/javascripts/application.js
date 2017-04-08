@@ -16,3 +16,39 @@
 //= require creative/scrollreveal/scrollreveal
 //= require creative/jquery.magnific-popup.min
 //= require submit_story.js
+//= require chosen.jquery.min.js
+//= require chosen.proto.min.js
+
+$(document).on('ready page:load', function () {
+    $('#story_tag_ids').chosen({
+        allow_single_deselect: true,
+        width: '100%',
+        create_option: function (tag) {
+            var chosen = this;
+            data = {'tag': tag};
+            $.ajax({
+                type: 'post',
+                url: '/tags',
+                data: JSON.stringify(data),
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+                },
+                contentType: 'application/json',
+                success: function (response) {
+                    chosen.append_option({
+                        value: response.id,
+                        text: response.name
+                    })
+                },
+                error: function (response) {
+                },
+                complete: function () {
+                }
+            })
+        },
+        persistent_create_option: true,
+        skip_no_results: true,
+        create_option_text: 'Add tag'
+    })
+});
+

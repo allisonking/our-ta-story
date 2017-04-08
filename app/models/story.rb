@@ -1,5 +1,6 @@
 class Story < ApplicationRecord
   mount_uploader :thumbnail, ThumbnailUploader
+  acts_as_taggable
 
   def self.published_not_featured(count: nil)
     #where(is_published: true, is_featured: false).order(created_at: :desc).limit(count)
