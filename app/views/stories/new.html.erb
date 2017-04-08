@@ -38,12 +38,19 @@
 <%= f.select :media_type, options_for_select([["Select One", ""], "Video", "Audio", "Text"]),
 { class: "col-lg-4" }, required: true%>
 
-    <%= f.text_field :name, label: "Title", required: true%>
+<%= f.text_field :author_name, help: "This can be the name of the interviewer, the interviewee, or both!" %>
+<%= f.text_field :hometown, help: "This will be displayed along with your story only if you fill it in and
+can be anywhere you consider a home" %>
+<%= f.number_field :birth_year, help: "This will be displayed along with your story only if you fill it in"%>
+
+    <%= f.text_field :name, label: "Title of Story", required: true%>
     <%= f.text_area :body, rows: "10", label: "Body", required: true %>
 
-    <%= f.file_field :thumbnail, label: "Upload a picture: "%>
+    <%= f.file_field :thumbnail, label: "Upload a picture: ", help: "We'll use this as a thumbnail for your story"%>
 
-    <%= f.text_field :video_link, label: "Link to your video:"%>
+    <%= f.text_field :video_link, label: "Link to your video:", help: "Link to your YouTube video"%>
+
+    <%= f.email_field :email, help:"This will only be used if we need to contact you and will never be publically displayed." %>
     <br>
     <div class="text-center">
       <%= f.submit "Submit My Story", class:"btn btn-primary sr-button" %>
