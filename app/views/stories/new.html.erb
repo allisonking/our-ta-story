@@ -22,14 +22,18 @@
   </section>
 
 <div class="text">
-
-  <p>If you are interested in contributing a story to Our Taiwanese American Story, read our <%= link_to 'Interview Guide', interview_guide_path%> for questions to help you get started.  Please note that by using this site and contributing your story, you are accepting our Terms of Service and Privacy Policy.</p>
+<%= render "static_pages/privacy_policy" %>
+<%= render "static_pages/terms_of_service" %>
+  <p>If you are interested in contributing a story to Our Taiwanese American Story, read our <%= link_to 'Interview Guide',
+  interview_guide_path%> for questions to help you get started.  Please note that by using this site and contributing
+  your story, you are accepting our <%= link_to "Terms of Service", "#termsOfService", "data-toggle" => "modal" %>
+   and <%= link_to "Privacy Policy", "#privacyPolicy", "data-toggle" => "modal" %>.</p>
 
 <p>Submissions can be in text, audio, or video format.</p>
 <ul>
   <li>Written Submission: Please proofread for errors before submitting. Submissions are ideally 2000 words or fewer.</li>
   <li>Audio Submission: Upload your audio file to Soundcloud and submit the link below.</li>
-  <li>Video Submission: If you have access to high quality video equipment, record a video of your story and upload it to Vimeo. Then submit the link to your video below.</li>
+  <li>Video Submission: If you have access to high quality video equipment, record a video of your story and upload it to YouTube. Then submit the link to your video below.</li>
 </ul>
 
 <p>Once reviewed, your content will be posted on the website.  If you have any questions, please contact us at <a href="mailto:info@ourtastory.com">info@ourtastory.com</a>.</p>

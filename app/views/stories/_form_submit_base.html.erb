@@ -1,7 +1,7 @@
 <%= bootstrap_form_for(@story) do |f| %>
     <h4>Start by selecting the Media Type of Your Story</h4>
     <%= f.select :media_type, options_for_select(options_for_select({
-       "Select One" => "", "Video" => "video", "Audio" => "audio", "Text" => "text" }, "text")
+       "Select One" => "", "Video" => "video", "Audio" => "audio", "Text" => "text" }, "")
     ),{ class: "col-lg-4" }, required: true%>
 
     <div class="base_story_input">
