@@ -11,19 +11,25 @@ $(document).ready(function(){
     switch(storyType) {
       case "text":
         audio.hide();
+        $("#audio_link").removeAttr('required');
         video.hide();
+        $("#video_link").removeAttr('required');
         text.show();
         base.show();
         break;
       case "video":
         audio.hide();
+        $("#audio_link").removeAttr('required');
         video.show();
+        $("#video_link").attr('required','');
         text.hide();
         base.show();
         break;
       case "audio":
         audio.show();
-        video.hide()
+        $("#audio_link").attr('required','')
+        video.hide();
+        $("#video_link").removeAttr('required')
         text.hide();
         base.show();
         break;

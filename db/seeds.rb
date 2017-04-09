@@ -5,14 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-stories = []
-(1..100).each do |i|
-  stories << Story.create(
-      {
-          name: "story#{i}",
-          body: "body: #{i}",
-          is_published: true
-      }
-                         )
-end

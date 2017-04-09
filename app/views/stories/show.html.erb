@@ -7,7 +7,7 @@
 </aside>
 <div class='story-wrapper'>
 
-  <% if @story.media_type == "Video" %>
+  <% if @story.media_type == "video" %>
   <div class="story-video">
     <iframe width="560" height="315"
       src="https://www.youtube.com/embed/<%= @story.youtube_id%>"  frameborder="0" allowfullscreen>
