@@ -1,8 +1,8 @@
 <%= bootstrap_form_for(@story) do |f| %>
     <h4>Start by selecting the Media Type of Your Story</h4>
     <%= f.select :media_type, options_for_select(options_for_select({
-       "Select One" => "", "Video" => "video", "Audio" => "audio", "Text" => "text" }, "")
-    ),{ class: "col-lg-4" }, required: true%>
+       "Video" => "video", "Audio" => "audio", "Text" => "text" })
+    ), {required: true, help:"Select the format of your story", prompt: "--Select Type--"}, { class: "col-lg-4" } %>
 
     <div class="base_story_input">
       <%= f.text_field :author_name, help: "This can be the name of the interviewer, the interviewee, or both!" %>
@@ -13,8 +13,9 @@
       <%= f.text_field :name, label: "Title", required: true%>
       <%= f.text_area :body, rows: "10", label: "Body", required: true %>
 
-      <%= f.label :tag_list, "Tags" %>
-      <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %>
+      <!--<%= f.label :tag_list, "Tags" %>-->
+      <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
+      {label: "Tags", help: "You can add tags to your story to help categorize it"}, {multiple: true} %>
 
       <%= render :partial => "form_submit_text", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_audio", :locals => {:f=>f} %>
