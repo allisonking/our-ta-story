@@ -18,7 +18,22 @@
     <%= image_tag(@story.thumbnail.url || default_url, class: "story-image") %>
   <% end %>
 
-  <div class="story-body section-block"><%= simple_format(@story.body) %></div>
+  <div class="story-body section-block">
+    <%= simple_format(@story.body) %>
+    <hr>
+    <% if @story.author_name != "" %>
+    <p>Author: <%= @story.author_name %> </p>
+    <% else %>
+    <p>Author: Anonymous </p>
+    <% end %>
+    <% if @story.hometown != "" %>
+    <p>Hometown: <%= @story.hometown %> </p>
+    <% end %>
+    <% if @story.birth_year %>
+    <p>Birth year: <%= @story.birth_year %> </p>
+    <% end %>
+  </div>
+
 
   <%= @story.tag_list %>
 

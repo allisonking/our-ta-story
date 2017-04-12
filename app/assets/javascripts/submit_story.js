@@ -31,7 +31,8 @@ $(document).ready(function(){
         video.hide();
         $("#video_link").removeAttr('required')
         text.hide();
-        base.show();
+        base.hide(); // get rid of this when audio works
+        //base.show();
         break;
       case "":
         audio.show();

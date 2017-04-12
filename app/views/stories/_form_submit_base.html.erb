@@ -2,23 +2,22 @@
     <h4>Start by selecting the Media Type of Your Story</h4>
     <%= f.select :media_type, options_for_select(options_for_select({
        "Video" => "video", "Audio" => "audio", "Text" => "text" })
-    ), {required: true, help:"Select the format of your story", prompt: "--Select Type--"}, { class: "col-lg-4" } %>
-
+    ), {required: true, help:"Select the format of your story", prompt: "--Select Type--"}, wrapper: { class: "required" } %>
+    <%= render :partial => "form_submit_audio", :locals => {:f=>f} %> <!-- TODO move this back down when audio works -->
     <div class="base_story_input">
       <%= f.text_field :author_name, help: "This can be the name of the interviewer, the interviewee, or both!" %>
       <%= f.text_field :hometown, help: "This will be displayed along with your story only if you fill it in and
       can be anywhere you consider a home" %>
       <%= f.number_field :birth_year, help: "This will be displayed along with your story only if you fill it in"%>
 
-      <%= f.text_field :name, label: "Title", required: true%>
-      <%= f.text_area :body, rows: "10", label: "Body", required: true %>
+      <%= f.text_field :name, label: "Title", wrapper: {class: 'required'}, required: true%>
+      <%= f.text_area :body, rows: "10", wrapper: {class: 'required'}, label: "Body", required: true %>
 
       <!--<%= f.label :tag_list, "Tags" %>-->
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
       {label: "Tags", help: "You can add tags to your story to help categorize it"}, {multiple: true} %>
 
       <%= render :partial => "form_submit_text", :locals => {:f=>f} %>
-      <%= render :partial => "form_submit_audio", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_video", :locals => {:f=>f} %>
       <%= f.email_field :email, help:"This will only be used if we need to contact you and will never be publically displayed." %>
 
