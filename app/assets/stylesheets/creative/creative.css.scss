@@ -466,3 +466,14 @@ body {
     display: block;
   }
 }
+
+@media (min-width: 760px) {
+  #home-name-mobile { display: none;}
+  #home-name-desktop { display: inline;}
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 760px) {
+  #home-name-desktop { display: none; }
+  #home-name-mobile { display: inline;}
+}

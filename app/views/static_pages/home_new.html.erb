@@ -42,7 +42,8 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a id="home-name" class="navbar-brand page-scroll" href="#page-top">Our Taiwanese American Story</a>
+                <a id="home-name-desktop" class="navbar-brand page-scroll" href="#page-top">Our Taiwanese American Story</a>
+                <a id="home-name-mobile" class="navbar-brand page-scroll" href="#page-top">Our TA Story</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -241,7 +242,18 @@
                       and operational costs of the <u><a href="http://tafworld.org/" style="color:white;">Taiwanese American Foundation Summer Conference</a></u>,
                       which fosters servant leaders so that they can make a unique and compassionate impact on humankind.</p>
                       <p>We deeply appreciate your support and investment!</p>
-                    <a href="#submit" class="page-scroll btn btn-default btn-xl sr-button">PayPal Button (coming soon)</a>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                      <input type="hidden" name="cmd" value="_donations">
+                      <input type="hidden" name="bn" value="TAF_Donate_WPS_US">
+                      <input type="hidden" name="business" value="TAFTreasurer@gmail.com">
+                      <input type="hidden" name="item_name" value="Our TA Story">
+                      <input type="hidden" name="rm" value="0">
+                      <input type="hidden" name="currency_code" value="USD">
+                      <input type="hidden" name="return" value="http://our-ta-story.herokuapp.com/">
+                      <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit"
+                      alt="PayPal - The safer, easier way to pay online.">
+                      <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
                 </div>
             </div>
         </div>
