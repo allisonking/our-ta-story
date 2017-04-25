@@ -1,7 +1,28 @@
 @import 'components/colors';
 
 .submit-wrapper {
+  .nav > .dropdown > .dropdown-menu > li > a {
+    color: $primary-color;
+  }
+  .nav > .dropdown > .dropdown-menu > li > a:hover {
+    color: #222222;
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    color: $primary-color-faded;
+  }
+  .navbar-default .navbar-header .navbar-brand:hover,
+  .navbar-default .navbar-header .navbar-brand:focus {
+    color: $primary-color;
+  }
 
+  .navbar-default .nav > li > a,
+  .navbar-default .nav > li > a:focus {
+    color: $primary-color-faded;
+  }
+  .navbar-default .nav > li > a:hover,
+  .navbar-default .nav > li > a:focus:hover {
+    color: $primary-color;
+  }
   .text {
   width: 80%;
   margin: 0 auto;
