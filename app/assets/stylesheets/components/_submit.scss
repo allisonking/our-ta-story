@@ -1,7 +1,7 @@
 @import 'components/colors';
 
 .submit-wrapper {
-  .nav > .dropdown > .dropdown-menu > li > a {
+  /*.nav > .dropdown > .dropdown-menu > li > a {
     color: $primary-color;
   }
   .nav > .dropdown > .dropdown-menu > li > a:hover {
@@ -22,18 +22,21 @@
   .navbar-default .nav > li > a:hover,
   .navbar-default .nav > li > a:focus:hover {
     color: $primary-color;
-  }
+  }*/
   .text {
-  width: 80%;
-  margin: 0 auto;
-  font-size: 1.1em;
-  padding: 2em;
-  //padding-bottom: 1em;
-  //padding-left: 2em;
-  // padding-right: 2em;
-}
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.1em;
+    padding: 2em;
+    //padding-bottom: 1em;
+    //padding-left: 2em;
+    // padding-right: 2em;
+  }
 
-.header {
+.header-logo {
+  max-width: 30%;
+}
+/*.header {
   position: relative;
   width: 100%;
   min-height: auto;
@@ -42,12 +45,12 @@
   background-size: cover;
   -o-background-size: cover;
   background-position: center 30%;
-  background-image: asset_url("FullSizeRender_1.jpg");
+  //background-image: asset_url("FullSizeRender_1.jpg");
   text-align: center;
   color: white;
   text-shadow: 1px 1px black;
 
-}
+}*/
 
   .submit-title {
     padding: 1em;
