@@ -479,4 +479,22 @@ body {
 @media only screen and (max-width: 760px) {
   #home-name-desktop { display: none; }
   #home-name-mobile { display: inline;}
+  .header-logo{
+    max-width: 75%;
+  }
+}
+
+/* our ta story logo */
+.header-logo {
+  max-width:50%;
+}
+
+.artist-credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5em;
+  p {
+    font-size: 14px;
+  }
 }
