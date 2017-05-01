@@ -2,7 +2,7 @@ class ThumbnailUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   #storage :file
@@ -20,15 +20,17 @@ class ThumbnailUploader < CarrierWave::Uploader::Base
     ActionController::Base.helpers.asset_path('default.png')
 
      # "/assets/" + [version_name, "default.png"].compact.join('_')
-   end
+  end
+
+  process resize_to_limit: [800, 800]
 
   # version :large do
   #   process resize_to_limit: [800, 800]
   # end
   #
-  # version :medium, :from_version => :large do
+  #version :medium, :from_version => :large do
   #   process resize_to_limit: [500, 500]
-  # end
+  #end
   #
   # version :thumb, :from_version => :medium do
   #   process resize_to_fit: [100, 100]
@@ -58,8 +60,15 @@ class ThumbnailUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
+  def filename
+     #"something.jpg" if original_filename
+      "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
+  protected
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
+  end
 
 end
