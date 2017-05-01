@@ -4,6 +4,9 @@
   <div class = "col-sm-2">
     <%= casein_number_field f, f.object, :rank%>
   </div>
+  <div class="col-lg-6">
+    <%= casein_text_field f, f.object, :name, :casein_label => "Title of Story" %>
+  </div>
   <div class="col-sm-2">
     <%= casein_check_box f, f.object, :is_published %>
   </div>
@@ -13,8 +16,11 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-6">
-    <%= casein_text_field f, f.object, :name, :casein_label => "Title of Story" %>
+  <div class="col-lg-4">
+    <%= casein_text_field f, f.object, :author_name %>
+  </div>
+  <div class="col-lg-4">
+    <%= casein_text_field f, f.object, :subject_of_story %>
   </div>
   <div class="col-lg-4">
     <%= casein_email_field f, f.object, :email, :casein_label => "Contact email" %>
@@ -22,9 +28,7 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-4">
-    <%= casein_text_field f, f.object, :author_name %>
-  </div>
+
   <div class="col-lg-2">
     <%= casein_number_field f, f.object, :birth_year %>
   </div>
