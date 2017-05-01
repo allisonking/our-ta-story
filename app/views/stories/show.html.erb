@@ -22,15 +22,18 @@
     <%= simple_format(@story.body) %>
     <hr>
     <% if @story.author_name != "" %>
-    <p>Author: <%= @story.author_name %> </p>
+    <p><label>Author:</label> <%= @story.author_name %> </p>
     <% else %>
-    <p>Author: Anonymous </p>
+    <p><label>Author:</label> Anonymous </p>
+    <% end %>
+    <% if @story.subject_of_story != "" %>
+    <p><label>This story is about:</label> <%= @story.subject_of_story %> </p>
     <% end %>
     <% if @story.hometown != "" %>
-    <p>Hometown: <%= @story.hometown %> </p>
+    <p><label>Hometown:</label> <%= @story.hometown %> </p>
     <% end %>
     <% if @story.birth_year %>
-    <p>Birth year: <%= @story.birth_year %> </p>
+    <p><label>Birth year:</label> <%= @story.birth_year %> </p>
     <% end %>
   </div>
 

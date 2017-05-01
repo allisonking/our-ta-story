@@ -5,13 +5,17 @@
     ), {required: true, help:"Select the format of your story", prompt: "--Select Type--"}, wrapper: { class: "required" } %>
     <%= render :partial => "form_submit_audio", :locals => {:f=>f} %> <!-- TODO move this back down when audio works -->
     <div class="base_story_input">
-      <%= f.text_field :author_name, help: "This can be the name of the interviewer, the interviewee, or both!" %>
+      <%= f.text_field :author_name, help: "This should be the name of the person who put this story together." %>
+      <%= f.text_field :subject_of_story, help: "This should be the name of the person whose story you are sharing.
+      If you're sharing a story from your life, you are the subject!", label: "Who is this story about?" %>
+
       <%= f.text_field :hometown, help: "Fill in only if you want this to be displayed with your story.
       It can be anywhere you consider a home." %>
-      <%= f.number_field :birth_year, help: "Fill in only if you want this to be displayed with your story."%>
+      <%= f.number_field :birth_year, help: "This should be the birth year of the subject of the story.
+      Fill in only if you want this to be displayed with your story."%>
 
       <%= f.text_field :name, label: "Title", wrapper: {class: 'required'}, required: true%>
-      <%= f.text_area :body, rows: "10", wrapper: {class: 'required'}, label: "Body", required: true %>
+      <%= f.text_area :body, rows: "10", id: "form_body", label: "Body" %>
 
       <!--<%= f.label :tag_list, "Tags" %>-->
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
