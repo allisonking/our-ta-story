@@ -21,20 +21,22 @@
   <div class="story-body section-block">
     <%= simple_format(@story.body) %>
     <hr>
-    <% if @story.author_name != "" %>
-    <p><label>Author:</label> <%= @story.author_name %> </p>
-    <% else %>
-    <p><label>Author:</label> Anonymous </p>
-    <% end %>
-    <% if @story.subject_of_story != "" %>
-    <p><label>This story is about:</label> <%= @story.subject_of_story %> </p>
-    <% end %>
-    <% if @story.hometown != "" %>
-    <p><label>Hometown:</label> <%= @story.hometown %> </p>
-    <% end %>
-    <% if @story.birth_year %>
-    <p><label>Birth year:</label> <%= @story.birth_year %> </p>
-    <% end %>
+    <div class="story-metadata">
+      <% if @story.author_name != "" %>
+      <p><label>Author:</label> <%= @story.author_name %> </p>
+      <% else %>
+      <p><label>Author:</label> Anonymous </p>
+      <% end %>
+      <% if @story.subject_of_story != "" %>
+      <p><label>This story is about:</label> <%= @story.subject_of_story %> </p>
+      <% end %>
+      <% if @story.hometown != "" %>
+      <p><label>Hometown:</label> <%= @story.hometown %> </p>
+      <% end %>
+      <% if @story.birth_year %>
+      <p><label>Birth year:</label> <%= @story.birth_year %> </p>
+      <% end %>
+    </div>
   </div>
 
 
