@@ -1,5 +1,20 @@
 $(document).ready(function(){
-  console.log($("#story_media_type").find(":selected").text());
+  //console.log($("#story_media_type").find(":selected").text());
+
+  $(function(){
+    $(':input[type=number]').on('mousewheel',function(e){ $(this).blur(); });
+  });
+
+  var makeBodyRequired = function(boolean) {
+    if(boolean) {
+      $("#form_body").attr('required','');
+      $("#form_body").parent().addClass('required');
+    }
+    else {
+      $("#form_body").removeAttr('required');
+      $("#form_body").parent().removeClass('required');
+    }
+  }
 
   $("#story_media_type").change(function(){
     var storyType = $("#story_media_type").val();
@@ -14,6 +29,8 @@ $(document).ready(function(){
         $("#audio_link").removeAttr('required');
         video.hide();
         $("#video_link").removeAttr('required');
+        //console.log($("#form-body").parent())
+        makeBodyRequired(true);
         text.show();
         base.show();
         break;
@@ -22,6 +39,7 @@ $(document).ready(function(){
         $("#audio_link").removeAttr('required');
         video.show();
         $("#video_link").attr('required','');
+        makeBodyRequired(false);
         text.hide();
         base.show();
         break;
@@ -30,6 +48,7 @@ $(document).ready(function(){
         $("#audio_link").attr('required','')
         video.hide();
         $("#video_link").removeAttr('required')
+        makeBodyRequired(false);
         text.hide();
         base.hide(); // get rid of this when audio works
         //base.show();
@@ -45,6 +64,6 @@ $(document).ready(function(){
     }
 
 
-    console.log($("#story_media_type").val());
+    //console.log($("#story_media_type").val());
   })
 })
