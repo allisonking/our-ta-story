@@ -183,12 +183,14 @@ header {
   position: relative;
   width: 100%;
   min-height: auto;
+
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), asset_url('IMG_1683.JPG');
+  background-position: center 55%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center 55%;
-  background-image: asset_url('IMG_1683.JPG');
+  //background-image: asset_url('IMG_1683.JPG');
   text-align: center;
   color: white;
   text-shadow: 1px 1px black;

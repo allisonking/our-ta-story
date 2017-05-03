@@ -50,8 +50,7 @@ $(document).ready(function(){
         $("#video_link").removeAttr('required')
         makeBodyRequired(false);
         text.hide();
-        base.hide(); // get rid of this when audio works
-        //base.show();
+        base.show();
         break;
       case "":
         audio.show();

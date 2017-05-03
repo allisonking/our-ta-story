@@ -16,6 +16,8 @@
 //= require creative/scrollreveal/scrollreveal
 //= require creative/jquery.magnific-popup.min
 //= require submit_story.js
+//= require show_story.js
+//= require team.js
 //= require chosen.jquery.min.js
 //= require chosen.proto.min.js
 
@@ -51,4 +53,3 @@ $(document).on('ready page:load', function () {
         create_option_text: 'Add tag'
     })
 });
-
