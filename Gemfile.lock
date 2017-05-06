@@ -324,7 +324,10 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    trix (0.10.1)
+      rails
     trollop (2.1.2)
+    truncate_html (0.9.3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.4)
@@ -364,6 +367,8 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  trix
+  truncate_html
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)

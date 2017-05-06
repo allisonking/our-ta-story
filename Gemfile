@@ -29,6 +29,8 @@ gem 'casein', '~>5.2.0'
 gem 'figaro'
 gem 'youtube_addy'
 gem 'bootstrap_form'
+gem 'truncate_html'
+gem 'trix'
 
 # Tagging
 gem 'acts-as-taggable-on'
