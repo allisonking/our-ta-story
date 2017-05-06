@@ -19,6 +19,6 @@ $(".static_pages.team").ready(function(){
     } else {
       $(all_team_members[i]).addClass('orient-right');
     }
-    $(all_team_members[i]).appendTo($('.team-wrapper'));
+    $(all_team_members[i]).appendTo($('.featured-wrapper'));
   }
 })

@@ -49,8 +49,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li class="dropdown">
                         <a class="page-scroll" href="#stories">Stories</a>
+                        <ul class="dropdown-menu">
+                          <li><%= link_to "All Stories", stories_path %></li>
+                        </ul>
                     </li>
                     <li class="dropdown">
                       <a class="page-scroll" href="#submit">Submit</a>
@@ -98,28 +101,29 @@
       <hr>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Stories</h2>
+          <h2 class="section-heading">Featured Story</h2>
           <hr class="primary">
         </div>
       </div>
-      <%= render 'stories/featured' %>
-      <br>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <%= link_to 'All Stories', stories_path, class:"btn btn-primary btn-xl sr-button" %>
+      <div class="bg-primary">
+        <%= render 'stories/featured' %>
+        <br>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <%= link_to 'More Stories', stories_path, class:"btn btn-default btn-xl sr-button" %>
+          </div>
         </div>
+        <br>
       </div>
-      <br>
-
     </div>
 
-    <section id="submit" class="bg-primary">
+    <section id="submit">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                  <hr class="light">
-                    <h2 class="section-heading">Submit a Story</h2>
-                    <hr class="light">
+                  <hr>
+                  <h2 class="section-heading">Submit a Story</h2>
+                  <hr>
                 </div>
             </div>
         </div>
@@ -127,28 +131,25 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
-                      <!--<%= link_to interview_guide_path do %>-->
-                        <i class="fa fa-4x fa-comments-o text-faded sr-icons"></i>
-
-                        <h3 style = "color: white;">Interview Guide</h3>
-                        <p class="text-faded home-link">Read our <u><%= link_to 'interview guide', interview_guide_path %></u> for tips on crafting a great story.</p>
-                        <!--<% end %>-->
+                        <i class="fa fa-4x fa-comments-o text-primary sr-icons"></i>
+                        <h3>Interview Guide</h3>
+                        <p>Read our <u><%= link_to 'interview guide', interview_guide_path %></u> for tips on crafting a great story.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-faded sr-icons"></i>
+                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
                         <h3>Craft Your Story</h3>
-                        <p class="text-faded">Record or write- any way you are comfortable with!</p>
+                        <p>Record or write- any way you are comfortable with!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
                         <!--<%= link_to new_story_path do %>-->
-                        <i class="fa fa-4x fa-paper-plane  text-faded sr-icons"></i>
-                        <h3 style = "color: white;">Submit!</h3>
+                        <i class="fa fa-4x fa-paper-plane  text-primary sr-icons"></i>
+                        <h3>Submit!</h3>
                         <!--<%= link_to 'Submit', new_story_path, class:"btn btn-default btn-xl sr-button" %>-->
-                        <p class="text-faded home-link">Once your story is ready to go, go ahead and <u><%= link_to 'submit it here', new_story_path %></u>.</p>
+                        <p>Once your story is ready, go ahead and <u><%= link_to 'submit it here', new_story_path %></u>.</p>
                         <!--<% end %>-->
                     </div>
                 </div>
@@ -157,93 +158,71 @@
     </section>
 
 
-    <section id="about">
+    <section id="about" class="bg-primary">
       <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                  <hr>
-                    <h2 class="section-heading">About</h2>
-                    <hr>
-                </div>
-            </div>
-            <p>Our Taiwanese American Story collects and archives stories of Taiwanese Americans
-              to preserve a collective history and foster intergenerational and intercultural communication.</p>
-
-            <p>This project was created in the tafLabs program at the Taiwanese American Foundation
-              2016 Summer Conference. Our team began this project with the desire to preserve the stories and experiences
-              of Taiwanese Americans. Drawing from other story platforms such as <a href="https://storycorps.org/">StoryCorps</a>
-               and <a href="http://www.firstdaysproject.org/"> First Days Project</a>, we wanted to create an
-               interactive archive where individuals can explore Taiwanese American history,
-              identity, and community. Our Taiwanese American Story was also created to inspire greater intergenerational
-              dialogue between individuals and their family members.</p>
-
-              <p>We are currently seeking – but are not limited to – stories from members of the Taiwanese diaspora
-                who lived in Taiwan before 1987 and immigrated to America. In the future, we envision this archive will
-                include the stories of Taiwanese Americans from all generations.  </p>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <hr class="light">
+            <h2 class="section-heading">About</h2>
+            <hr class="light">
+          </div>
         </div>
-        <div class="container">
-            <div class="row">
+        <p>Our Taiwanese American Story collects and archives stories of Taiwanese Americans
+          to preserve a collective history and to foster intergenerational and intercultural communication.</p>
+
+          <p>This project was created in the tafLabs program at the Taiwanese American Foundation
+            2016 Summer Conference. Our team began this project with the desire to preserve the stories and experiences
+            of Taiwanese Americans. Drawing from other story platforms such as <a href="https://storycorps.org/" class="hyperlink">StoryCorps</a>
+            and <a href="http://www.firstdaysproject.org/" class="hyperlink"> First Days Project</a>, we wanted to create an
+            interactive archive where individuals can explore Taiwanese American history,
+            identity, and community. Our Taiwanese American Story was also created to inspire greater intergenerational
+            dialogue between individuals and their family members.</p>
+
+            <p>We are currently seeking – but are not limited to – stories from members of the Taiwanese diaspora
+              who lived in Taiwan before 1987 and immigrated to America. In the future, we envision this archive will
+              include the stories of Taiwanese Americans from all generations.  </p>
+            </div>
+            <div class="container">
+              <div class="row">
                 <div class="col-lg-3 col-lg-offset-3 col-md-6 text-center">
-                    <div class="service-box">
-                      <%= link_to "http://www.tafworld.org/taf-summer-conference/programs/taflabs/", target: :_blank do %>
-                        <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
-                        <%= image_tag("taflabs_logo.jpg", class:"img-responsive, sr-icons, about-person") %>
-                        <!--<h3><a href="http://www.tafworld.org/taf-summer-conference/programs/taflabs/">tafLabs</a></h3>-->
-                        <h3>tafLabs</h3>
-                        <% end %>
-                    </div>
+                  <div class="service-box">
+                    <%= link_to "http://www.tafworld.org/taf-summer-conference/programs/taflabs/", target: :_blank do %>
+                    <!--<i class="fa fa-4x fa-diamond text-primary sr-icons"></i>-->
+                    <%= image_tag("taflabs_logo.jpg", class:"img-responsive, sr-icons, about-person") %>
+                    <!--<h3><a href="http://www.tafworld.org/taf-summer-conference/programs/taflabs/">tafLabs</a></h3>-->
+                    <h3 class="text-faded">tafLabs</h3>
+                    <% end %>
+                  </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                   <div class="service-box">
                     <%= link_to "http://www.tafworld.org", target: :_blank do %>
                     <%= image_tag("taf.jpg", class:"img-responsive, sr-icons, about-person") %>
-                    <h3>TAF</h3>
+                    <h3 class="text-faded">TAF</h3>
                     <% end %>
                   </div>
                 </div>
-                <!--<div class="col-lg-3 col-md-6 text-center">
-                  <div class="service-box">
-                      <%= image_tag("default.png", class:"img-responsive, sr-icons, about-person") %>
-                      <h3>Fill in later</h3>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                  <div class="service-box">
-                      <%= image_tag("default.png", class:"img-responsive, sr-icons, about-person") %>
-                      <h3>Fill in later</h3>
-                  </div>
-                </div> -->
             </div>
         </div>
         <br>
         <div class="row">
           <div class="col-lg-12 text-center">
-            <%= link_to 'Meet the Team', team_path, class:"btn btn-primary btn-xl sr-button" %>
+            <%= link_to 'Meet the Team', team_path, class:"btn btn-default btn-xl sr-button" %>
           </div>
         </div>
     </section>
 
-
-  <!--  <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
-            </div>
-        </div>
-    </aside> -->
-
-    <section id="Donate" class="bg-primary">
+    <section id="Donate">
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <hr class="light">
-                    <h2 class="section-heading">Donate!</h2>
-                    <hr class="light">
+                  <hr>
+                  <h2 class="section-heading">Donate!</h2>
+                  <hr>
                     <p> As part of a non-profit organization, Our Taiwanese American Story depends entirely on your
-                      financial support.  Your donation will go towards website maintenance, other tafLabs initiatives,
-                      and operational costs of the <u><a href="http://tafworld.org/" style="color:white;">Taiwanese American Foundation Summer Conference</a></u>,
+                      financial support.  Your donation will go towards website maintenance and
+                      the <a href="http://tafworld.org/">Taiwanese American Foundation Summer Conference</a>,
                       which fosters servant leaders so that they can make a unique and compassionate impact on humankind.</p>
                       <p>We deeply appreciate your support and investment!</p>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -263,21 +242,17 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                <hr class="primary">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Questions? Suggestions? Send us an email and we will get back to you as soon as possible!</p>
+                  <hr class="light">
+                  <h2 class="section-heading">Let's Get In Touch!</h2>
+                  <hr class="light">
+                  <p>Questions? Suggestions? Send us an email and we will get back to you as soon as possible!</p>
                 </div>
-                <!--<div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
-                </div>-->
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="mailto:info@ourtastory.com"><i class="fa fa-envelope-o text-primary fa-3x sr-contact"></i></a>
+                    <a href="mailto:info@ourtastory.com"><i class="fa fa-envelope-o text-faded fa-3x sr-contact"></i></a>
                 </div>
             </div>
         </div>

@@ -33,7 +33,7 @@
   }
 
   .story-body {
-    padding : 1em;
+    //padding : 1em;
 
   }
 
@@ -84,7 +84,7 @@
 
 // this is for the index of stories
 
-#story-select-wrapper {
+.story-select-wrapper {
   display: inline-block;
   float: none;
   vertical-align: top;
@@ -93,23 +93,28 @@
     padding-left: 1em;
     padding-right: 1em;
   }
+
+  .story-thumb {
+    margin: auto;
+    width: 100%;
+  }
 }
 
 @media (min-width: 0px) {
-  #story-select-wrapper {
+  .story-select-wrapper {
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  #story-select-wrapper {
+  .story-select-wrapper {
     width: 49%;
 
   }
 }
 
 @media (min-width: 979px) {
-  #story-select-wrapper {
+  .story-select-wrapper {
     width: 33%;
   }
 }

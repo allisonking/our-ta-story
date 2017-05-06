@@ -6,9 +6,9 @@ class StoriesController < ApplicationController
       @title = "Stories tagged: #{params[:tag]}"
     else
       @title = "All stories"
-      @featured = Story.featured
+      @featured = Story.featured(count: 1)
     end
-    @stories = @stories.paginate page: params[:page], per_page: 10
+    @stories = @stories.paginate page: params[:page], per_page: 9
   end
 
   def new

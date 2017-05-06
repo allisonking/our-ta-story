@@ -1,31 +1,24 @@
-<div class="featured-wrapper">
-  <section class="no-padding">
-    <div class="container-fluid">
-      <div class="row no-gutter">
-        <% @featured.each do |featured| %>
-        <div class="col-lg-4 col-sm-6">
-          <div class="featured-div">
-          <%= link_to featured, class:"portfolio-box" do%>
-          <% if featured.media_type == "video" %>
-          <%=image_tag("https://img.youtube.com/vi/"+featured.youtube_id+"/mqdefault.jpg", class:"img-responsive featured-image")%>
-          <% else %>
-          <%=image_tag(featured.thumbnail.url || default_url, class:"img-responsive featured-image")%>
-          <% end %>
-          <div class="portfolio-box-caption">
-            <div class="portfolio-box-caption-content">
-              <div class="project-category text-faded">
-                <%= featured.author_name %>
-              </div>
-              <div class="project-name">
-                <%= featured.name %>
-              </div>
-            </div>
-          </div>
-          <% end %>
-        </div>
-        </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
+<div class="featured-wrapper bg-primary">
+  <% @featured.each do |featured| %>
+	<section class="spotlight style1 content-align-left image-position-center">
+		<div class="content">
+			<h2><i><%= featured.name %></i></h2>
+      <h4><%= featured.author_name%> </h4>
+      <p>
+        <%= truncate_html(simple_format(featured.body), length: 300) %>
+        <%= link_to 'See More', featured, class:"btn btn-default sr-button" %>
+      </p>
+
+		</div>
+		<div class="image">
+      <%= link_to featured do %>
+      <% if featured.media_type == "video" %>
+      <%=image_tag("https://img.youtube.com/vi/"+featured.youtube_id+"/mqdefault.jpg", class:"img-responsive featured-image")%>
+      <% else %>
+      <%=image_tag(featured.thumbnail.url || default_url, class:"img-responsive featured-image")%>
+      <% end %>
+      <% end %>
+		</div>
+	</section>
+  <% end %>
 </div>

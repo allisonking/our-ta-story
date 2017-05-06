@@ -24,26 +24,24 @@
     <%= simple_format(@story.body) %>
     <hr>
     <div class="story-metadata">
-      <% if @story.author_name != "" %>
+      <% if @story.author_name.present? %>
       <p><label>Author:</label> <%= @story.author_name %> </p>
       <% else %>
       <p><label>Author:</label> Anonymous </p>
       <% end %>
-      <% if @story.subject_of_story != "" %>
+      <% if @story.subject_of_story.present?%>
       <p><label>This story is about:</label> <%= @story.subject_of_story %> </p>
       <% end %>
-      <% if @story.hometown != "" %>
+      <% if @story.hometown.present? %>
       <p><label>Hometown:</label> <%= @story.hometown %> </p>
       <% end %>
-      <% if @story.birth_year %>
+      <% if @story.birth_year.present? %>
       <p><label>Birth year:</label> <%= @story.birth_year %> </p>
       <% end %>
     </div>
   </div>
 
-
-  <%= @story.tag_list %>
-
+  <%= raw @story.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
 
   <div class="text-center">
     <%= link_to "Back to Stories", stories_path, class: "btn btn-primary sr-button" %>

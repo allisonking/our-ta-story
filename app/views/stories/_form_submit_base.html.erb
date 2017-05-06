@@ -5,9 +5,10 @@
     ), {required: true, help:"Select the format of your story", prompt: "--Select Type--"}, wrapper: { class: "required" } %>
 
     <div class="base_story_input">
-      <%= f.text_field :author_name, help: "This should be the name of the person who put this story together." %>
+      <%= f.text_field :author_name, help: "This should be the name of the person who put this story together.
+      We accept anonymous submissions.", label:" Author name (optional)" %>
       <%= f.text_field :subject_of_story, help: "This should be the name of the person whose story you are sharing.
-      If you're sharing a story from your life, you are the subject!", label: "Who is this story about?" %>
+      If you're sharing a story from your life, you are the subject!", label: "Who is this story about? (optional)" %>
 
       <%= f.text_field :hometown, help: "Fill in only if you want this to be displayed with your story.
       It can be anywhere you consider a home." %>
@@ -15,15 +16,16 @@
       Fill in only if you want this to be displayed with your story."%>
 
       <%= f.text_field :name, label: "Title", wrapper: {class: 'required'}, required: true%>
-      <%= f.text_area :body, rows: "10", id: "form_body", label: "Body" %>
-
+      <label>Body</label>
+      <%= f.trix_editor :body, rows: "10", id: "form_body", label: "Body" %>
+      <br>
       <!--<%= f.label :tag_list, "Tags" %>-->
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
       {label: "Tags", help: "You can add tags to your story to help categorize it"}, {multiple: true} %>
 
       <%= render :partial => "form_submit_text", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_video", :locals => {:f=>f} %>
-      <%= render :partial => "form_submit_audio", :locals => {:f=>f} %> 
+      <%= render :partial => "form_submit_audio", :locals => {:f=>f} %>
       <%= f.email_field :email, help:"This will only be used if we need to contact you and will never be publically displayed." %>
 
       <div class="text-center">
