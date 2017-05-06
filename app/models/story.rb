@@ -50,13 +50,6 @@ class Story < ApplicationRecord
 
     result = JSON.parse(body)
     return result['thumbnail_url']
-
-    result.each do |doc|
-      puts doc["id"] #reference properties like this
-      puts doc # =>  this is the result in object form
-      puts ""
-      puts ""
-    end
   end
 
 end

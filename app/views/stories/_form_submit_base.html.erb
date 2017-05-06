@@ -16,9 +16,11 @@
       Fill in only if you want this to be displayed with your story."%>
 
       <%= f.text_field :name, label: "Title", wrapper: {class: 'required'}, required: true%>
+
       <label>Body</label>
       <%= f.trix_editor :body, rows: "10", id: "form_body", label: "Body" %>
       <br>
+
       <!--<%= f.label :tag_list, "Tags" %>-->
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
       {label: "Tags", help: "You can add tags to your story to help categorize it"}, {multiple: true} %>
@@ -26,7 +28,7 @@
       <%= render :partial => "form_submit_text", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_video", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_audio", :locals => {:f=>f} %>
-      <%= f.email_field :email, help:"This will only be used if we need to contact you and will never be publically displayed." %>
+      <%= f.email_field :email, help:"This will only be used if we need to contact you and will never be publically displayed.", wrapper: {class: 'required'}, required: true %>
 
       <div class="text-center">
         <%= f.submit "Submit My Story", class:"btn btn-primary sr-button" %>

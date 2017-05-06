@@ -1,6 +1,6 @@
 @import 'components/colors';
 
-.featured-wrapper {
+.team-wrapper {
   hr {
     border: none;
     height: 1px;
@@ -10,11 +10,6 @@
     max-width: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-
-  .featured-image {
-    margin: auto;
-    width: 100%;
   }
 
   .spotlight.style1 {
@@ -194,6 +189,12 @@
     -webkit-object-position: right;
     -ms-object-position: right;
     object-position: right;
+  }
+
+  .featured-image {
+    margin: auto;
+    width: 100%;
+    object-fit: contain;
   }
 
 }
