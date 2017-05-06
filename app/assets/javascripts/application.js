@@ -20,6 +20,7 @@
 //= require team.js
 //= require chosen.jquery.min.js
 //= require chosen.proto.min.js
+//= require trix
 
 $(document).on('ready page:load', function () {
     $('#story_tag_ids').chosen({
