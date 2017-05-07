@@ -2,6 +2,7 @@ require 'net/http'
 require 'json'
 
 class Story < ApplicationRecord
+  #validates :name, presence: true
   mount_uploader :thumbnail, ThumbnailUploader
   acts_as_taggable
 

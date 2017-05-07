@@ -7,12 +7,15 @@ $(document).ready(function(){
 
   var makeBodyRequired = function(boolean) {
     if(boolean) {
-      $("#form_body").attr('required','');
-      $("#form_body").parent().addClass('required');
+      //console.log($("#form_body_trix_input_story").previousElementSibling)
+      $("#form_body_trix_input_story").attr('required','');
+      //$("#form_body_trix_input_story").previousElementSibling.attr('required','');
+      $("#form_body_label").addClass('required');
     }
     else {
-      $("#form_body").removeAttr('required');
-      $("#form_body").parent().removeClass('required');
+      //$("#form_body_trix_input_story").previousElementSibling.removeAttr('required');
+      $("#form_body_trix_input_story").removeAttr('required');
+      $("#form_body_label").removeClass('required');
     }
   }
 

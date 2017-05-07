@@ -17,8 +17,9 @@
 
       <%= f.text_field :name, label: "Title", wrapper: {class: 'required'}, required: true%>
 
-      <label>Body</label>
-      <%= f.trix_editor :body, rows: "10", id: "form_body", label: "Body" %>
+      <label id="form_body_label">Body</label>
+      <%= f.trix_editor :body , id:"form_body"%>
+
       <br>
 
       <!--<%= f.label :tag_list, "Tags" %>-->
