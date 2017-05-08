@@ -4,12 +4,15 @@
   		<title>Our TA Story</title>
   		<meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      <meta property="og:image" content="<%= image_url('logo_spaced.jpg') %>" />
+      <meta property="og:image" content="<%= image_url('cover.png') %>" />
       <meta property="og:url"content="http://www.ourtastory.org" />
       <meta property="og:title" content="Our Taiwanese American Story" />
       <meta property="og:description" content="We collect and archive stories of Taiwanese Americans to preserve a collective history and to foster intergenerational and intercultural communication." />
       <%= favicon_link_tag 'favicon.ico' %>
       <%= render 'layouts/google_analytics'%>
+      <% if content_for? :additional_head_info %>
+      <%= yield :additional_head_info %>
+      <% end %>
   	</head>
 
     <%= csrf_meta_tags %>
