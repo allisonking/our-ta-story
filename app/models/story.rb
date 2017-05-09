@@ -39,7 +39,7 @@ class Story < ApplicationRecord
 
   private
   def get_soundcloud_thumb()
-    url = "http://soundcloud.com/oembed?format=js&url=" + self.video_link
+    url = "http://soundcloud.com/oembed?format=js&url=" + self.audio_link
     puts url
     uri = URI.parse(url)
 
@@ -54,13 +54,3 @@ class Story < ApplicationRecord
   end
 
 end
-
-#  url = "http://soundcloud.com/oembed?format=js&url=" + self.video_link + "&iframe=true&callback=?"
-#  uri = URI(url)
-#  http = Net::HTTP.new(uri.host, uri.port)
-#  request = Net::HTTP::Get.new(uri.request_uri)
-#  response = http.request(request).body
-#  response = response[1..-1]
-#  puts response
-#  json_response = JSON.parse(response)
-#  return json_response['thumbnail_url']

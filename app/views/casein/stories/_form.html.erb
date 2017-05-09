@@ -48,6 +48,14 @@
   <!--TODO edit tags list for story-->
 </div>
 
+<div class="row">
+  <div class="col-sm-4">
+    <!--<%= casein_file_field f, f.object, "test_thumbnail", :thumbnail %>-->
+    <label>Uploaded Image</label>
+    <%=image_tag(f.object.thumbnail.url || default_url, :class => "story-image") %>
+  </div>
+</div>
+
 <% if f.object.media_type == "video" %>
 <div class="row">
   <div class="col-sm-6">
@@ -59,15 +67,11 @@
     </div>
   </div>
 </div>
-<% else %>
+<% elsif f.object.media_type == "audio" %>
 <div class="row">
-  <div class="col-sm-4">
-    <!--<%= casein_file_field f, f.object, "test_thumbnail", :thumbnail %>-->
-    <label>Image</label>
-    <%=image_tag(f.object.thumbnail.url || default_url, :class => "story-image") %>
+  <div class="col-sm-6">
+    <%= casein_text_field f, f.object, :audio_link %>
+    <%= link_to "audio here", href=f.object.audio_link %>
   </div>
 </div>
 <% end %>
-
-<!--<div class="row">
-</div>-->

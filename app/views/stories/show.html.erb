@@ -17,7 +17,7 @@
   </div>
   <br>
   <% elsif @story.media_type == "audio" %>
-  <%= link_to "audio here", href=@story.video_link %>
+  <%= link_to "audio here", href=@story.audio_link %>
   <% else %>
     <%= image_tag(@story.thumbnail.url || default_url, class: "story-image") %>
   <% end %>

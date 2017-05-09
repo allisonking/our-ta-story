@@ -27,8 +27,9 @@
       {label: "Tags", help: "You can add tags to your story to help categorize it"}, {multiple: true} %>
 
       <%= render :partial => "form_submit_text", :locals => {:f=>f} %>
-      <%= render :partial => "form_submit_video", :locals => {:f=>f} %>
       <%= render :partial => "form_submit_audio", :locals => {:f=>f} %>
+      <%= render :partial => "form_submit_video", :locals => {:f=>f} %>
+
       <%= f.email_field :email, help:"This will only be used if we need to contact you and will never be publically displayed.", wrapper: {class: 'required'}, required: true %>
 
       <div class="text-center">
