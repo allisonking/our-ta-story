@@ -3,8 +3,9 @@
 <% end %>
 <%= render 'layouts/nav' %>
 <aside class="bg-primary">
-  <div class='story-wrapper'>
-    <h1 class="story-title text-center"><%= @story.name %></h1>
+  <div class='story-wrapper text-center'>
+    <h1 class="story-title"><%= @story.name %></h1>
+    <h3 class="story-date"> <%= l @story.created_at, format: :month_day_comma_year %> </h3>
   </div>
 </aside>
 <div class='story-wrapper'>
@@ -43,8 +44,45 @@
     </div>
   </div>
 
+  <!-- Tags -->
   <%= raw @story.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
 
+  <!-- Comments -->
+  <div class="story-metadata">
+    <hr>  
+    <% if @story.comments.present?%>
+    <h3>Comments: </h3>
+    <% @story.comments.each do |comment| %>
+    <p>
+      <b><%= l comment.created_at, format: :month_day_comma_year %></b>
+    </p>
+    <p>
+      <i><%= comment.commenter %>:</i>
+      <%= comment.body %>
+    </p>
+    <% end %>
+    <hr>
+    <% end %>
+  </div>
+
+<div class="text-center">
+<button id="toggleCommentBtn" class="btn btn-primary sr-button">Add a comment</button>
+  <div id="add-comment">
+    <br>
+    <%= bootstrap_form_for([@story, @story.comments.build]) do |f| %>
+    <div class="field">
+      <%= f.text_field :commenter, label: "Name" %>
+    </div>
+    <div class="field">
+      <%= f.text_area :body, label: "Comment" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Post Comment", class:"btn btn-primary sr-button"%>
+    </div>
+  </div>
+<% end %>
+</div>
+<hr>
   <div class="text-center">
     <%= link_to "Back to Stories", stories_path, class: "btn btn-primary sr-button" %>
   </div>

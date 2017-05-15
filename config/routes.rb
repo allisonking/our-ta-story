@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   end
 
   # Resources
-  resources :stories
+  resources :stories do
+    resources :comments
+  end
   resources :tags, except: :show
   get 'tags/:tag', to: 'stories#index'
 

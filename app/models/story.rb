@@ -5,7 +5,8 @@ class Story < ApplicationRecord
   #validates :name, presence: true
   mount_uploader :thumbnail, ThumbnailUploader
   acts_as_taggable
-
+  has_many :comments
+  
   def self.published_not_featured(count: nil)
     #where(is_published: true, is_featured: false).order(created_at: :desc).limit(count)
     where(is_published: true, is_featured: false).order(:rank).limit(count)

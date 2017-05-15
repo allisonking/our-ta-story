@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  //console.log($("#story_media_type").find(":selected").text());
 
   $(function(){
     $(':input[type=number]').on('mousewheel',function(e){ $(this).blur(); });
@@ -7,13 +6,10 @@ $(document).ready(function(){
 
   var makeBodyRequired = function(boolean) {
     if(boolean) {
-      //console.log($("#form_body_trix_input_story").previousElementSibling)
       $("#form_body_trix_input_story").attr('required','');
-      //$("#form_body_trix_input_story").previousElementSibling.attr('required','');
       $("#form_body_label").addClass('required');
     }
     else {
-      //$("#form_body_trix_input_story").previousElementSibling.removeAttr('required');
       $("#form_body_trix_input_story").removeAttr('required');
       $("#form_body_label").removeClass('required');
     }
@@ -65,7 +61,5 @@ $(document).ready(function(){
         break;
     }
 
-
-    //console.log($("#story_media_type").val());
   })
 })

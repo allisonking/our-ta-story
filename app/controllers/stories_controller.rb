@@ -34,7 +34,7 @@ class StoriesController < ApplicationController
 
   def story_params
     params.require(:story).permit(:name, :body, :thumbnail, :media_type, :video_link, :audio_link, :author_name, :hometown,
-                                  :birth_year, :email, :subject_of_story, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
+                                  :birth_year, :email, :subject_of_story, :tag_list, :tag, { tag_ids: [] }, :tag_ids, :comments)
   end
 
 end
