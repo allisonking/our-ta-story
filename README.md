@@ -1,3 +1,3 @@
 # README
 
-This is the Ruby on Rails application for [https://www.ourtastory.org](ourTAstory.org!) 
+This is the Ruby on Rails application for [ourTAstory.org](https://www.ourTAstory.org) 
