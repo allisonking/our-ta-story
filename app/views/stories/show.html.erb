@@ -47,12 +47,12 @@
   <!-- Tags -->
   <%= raw @story.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
 
-  <!-- Comments -->
   <div class="story-metadata">
-    <hr>  
+    <hr>
+    <!-- Comments -->
     <% if @story.comments.present?%>
     <h3>Comments: </h3>
-    <% @story.comments.each do |comment| %>
+    <% @story.comments.by_date.each do |comment| %>
     <p>
       <b><%= l comment.created_at, format: :month_day_comma_year %></b>
     </p>
