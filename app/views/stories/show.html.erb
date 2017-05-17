@@ -1,5 +1,11 @@
 <% content_for :additional_head_info do %>
-    <meta property="og:image" content="<%= @story.thumbnail.url %>" />
+<% if @story.media_type == "video" %>
+<meta property="og:image" content="<%="https://img.youtube.com/vi/#{@story.youtube_id}/hqdefault.jpg" %>" />
+<% elsif @story.media_type == "audio" %>
+<meta property="og:image" content="<%= @story.soundcloud_thumb %>" />
+<% else %>
+<meta property="og:image" content="<%= @story.thumbnail.url %>" />
+    <% end %>
 <% end %>
 <%= render 'layouts/nav' %>
 <aside class="bg-primary">
